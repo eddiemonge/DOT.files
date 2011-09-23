@@ -1,0 +1,16 @@
+# Dir navigation
+alias ..='cd ..'
+alias ~='cd ~'
+alias ls="ls -alh"
+alias web="cd /Users/eddie/Sites"
+
+
+# Utilities
+alias vim="mvim"
+alias vimdiff="mvim -d"
+alias startvm="VBoxManage startvm --type headless"
+alias vbox="VBoxManage controlvm"
+
+
+# SSH Sites
+alias sshsword="ssh 10.11.12.237"

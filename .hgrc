@@ -1,0 +1,15 @@
+[ui]
+username="Username <email@address.com>"
+verbose=True
+
+[alias]
+__mystatus = status
+st = !hg __mystatus $($HG root) $HG_ARGS
+pullr = pull --rebase
+
+[extensions]
+rebase = 
+hgext.extdiff =
+mq = 
+graphlog =
+purge =
