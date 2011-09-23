@@ -22,6 +22,8 @@
 .viminfo
 .vim-fuf-data
 .vim/bundles
+.vim/colors
+.vim/update-bundles
 Desktop
 Documents
 Downloads
