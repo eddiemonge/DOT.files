@@ -10,12 +10,16 @@ if [ -f ~/.aliases ]; then
 fi
 
 
-# Path Stuff
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/php5/bin:/usr/local/mysql/bin:/Developer/android-sdk-mac_x86/platform-tools:$PATH"
-
+## Path Stuff
+# Local bins
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+# PHP and MySQL
+export PATH="/usr/local/php5/bin:/usr/local/mysql/bin:$PATH"
+# Android SDK
+export PATH="/Developer/android-sdk-mac_x86/platform-tools:$PATH"
 # JSLint
 export PATH="/usr/lib/jsl-0.3.0-mac:$PATH"
-
-
+# CTags
+export PATH="/usr/local/bin/ctags:$PATH"
 # Setting PATH for Python 2.7
-export PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+export PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH"
