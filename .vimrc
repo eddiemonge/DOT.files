@@ -87,6 +87,15 @@ nmap <F5> :NERDTreeToggle<CR>
 map <LEADER>c <c-_><c-_>
 
 
+" Commands for TagList
+nnoremap <silent> <F6> :TlistToggle<CR>
+let Tlist_Exit_OnlyWindow = 1     " exit if taglist is last window open
+let Tlist_Show_One_File = 1       " Only show tags for current buffer
+let Tlist_Enable_Fold_Column = 0  " no fold column (only showing one file)
+let tlist_sql_settings = 'sql;P:package;t:table'
+let tlist_ant_settings = 'ant;p:Project;r:Property;t:Target'
+
+
 filetype plugin indent on
 
 
