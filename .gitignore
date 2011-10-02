@@ -1,4 +1,5 @@
 *.DS_Store
+.aliases_custom
 .Trash
 .Trashes
 .MacOSX

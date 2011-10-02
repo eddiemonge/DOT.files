@@ -1,16 +1,21 @@
 # Dir navigation
 alias ..='cd ..'
 alias ~='cd ~'
-alias ls="ls -alh"
+alias ll="ls -alh"
 alias web="cd /Users/eddie/Sites"
 
 
 # Utilities
+alias g="git"
 alias vim="mvim"
 alias vimdiff="mvim -d"
 alias startvm="VBoxManage startvm --type headless"
 alias vbox="VBoxManage controlvm"
 
+# Development stuff
+alias edithosts="sudo mvim /etc/hosts"
+alias gitsync="git pull upstream master && git push origin master"
 
-# SSH Sites
-alias sshsword="ssh 10.11.12.237"
+if [ -f ~/.custom_aliases ]; then
+	source ~/.aliases_custom
+fi
