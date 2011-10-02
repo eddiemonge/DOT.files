@@ -10,9 +10,10 @@ if [ -f ~/.aliases ]; then
 fi
 
 
-## Path Stuff
+# Path Stuff
 # Local bins
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+
 # PHP and MySQL
 export PATH="/usr/local/php5/bin:/usr/local/mysql/bin:$PATH"
 # Android SDK
