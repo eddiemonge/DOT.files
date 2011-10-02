@@ -38,9 +38,7 @@
 .titanium
 .viminfo
 .vim-fuf-data
-.vim/bundles
-.vim/colors
-.vim/update-bundles
+.vim/*
 Applications
 bin
 Books
