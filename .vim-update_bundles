@@ -11,6 +11,7 @@ git_bundles = [
   "git://github.com/ervandew/supertab.git",
 	"git://github.com/vim-scripts/Gist.vim.git",
 	"git://github.com/wincent/Command-T.git",
+	"git://github.com/eddiemonge/xterm16.vim.git",
 ]
 
 vim_org_scripts = [

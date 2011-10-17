@@ -10,7 +10,8 @@ call pathogen#helptags()
 
 syntax on " Turn on that syntax highlighting
 
-
+" let xterm16_brightness = 'default'     " Change if needed 
+let xterm16_colormap = 'soft'       " Change if needed 
 colorscheme xterm16
 
 
