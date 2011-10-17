@@ -24,3 +24,5 @@ export PATH="/usr/lib/jsl-0.3.0-mac:$PATH"
 export PATH="/usr/local/bin/ctags:$PATH"
 # Setting PATH for Python 2.7
 export PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH"
+# Markdown
+export PATH="/usr/lib/Markdown_1.0:$PATH"
