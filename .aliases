@@ -12,6 +12,7 @@ alias vimdiff="mvim -d"
 alias startvm="VBoxManage startvm --type headless"
 alias vbox="VBoxManage controlvm"
 alias eclim="/Applications/eclipse/eclimd &"
+alias markdown="perl /usr/lib/Markdown_1.0/Markdown.pl"
 
 # Development stuff
 alias edithosts="sudo mvim /etc/hosts"
