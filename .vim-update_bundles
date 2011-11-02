@@ -9,9 +9,9 @@ git_bundles = [
   "git://github.com/tsaleh/vim-tcomment.git",
   "git://github.com/skammer/vim-css-color.git",
   "git://github.com/ervandew/supertab.git",
-	"git://github.com/vim-scripts/Gist.vim.git",
-	"git://github.com/wincent/Command-T.git",
-	"git://github.com/eddiemonge/xterm16.vim.git",
+  "git://github.com/vim-scripts/Gist.vim.git",
+  "git://github.com/wincent/Command-T.git",
+  "git://github.com/eddiemonge/xterm16.vim.git",
 ]
 
 vim_org_scripts = [
@@ -30,7 +30,9 @@ vim_org_scripts = [
 require 'fileutils'
 require 'open-uri'
 
-bundles_dir = File.join(File.dirname(__FILE__), "bundle")
+vim_dir = "~/.vim"
+
+bundles_dir = File.join(vim_dir, "bundle")
 
 FileUtils.cd(bundles_dir)
 
