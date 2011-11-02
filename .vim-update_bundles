@@ -30,13 +30,13 @@ vim_org_scripts = [
 require 'fileutils'
 require 'open-uri'
 
-vim_dir = "~/.vim"
+vim_dir = File.join(File.expand_path('~'), ".vim")
 
 bundles_dir = File.join(vim_dir, "bundle")
 
 FileUtils.cd(bundles_dir)
 
-puts "Trashing everything (lookout!)"
+puts "Trashing everything in ${bundles_dir} (lookout!)"
 Dir["*"].each {|d| FileUtils.rm_rf d }
 
 git_bundles.each do |url|
