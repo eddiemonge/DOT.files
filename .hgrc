@@ -5,6 +5,7 @@ verbose=True
 [alias]
 __mystatus = status
 st = !hg __mystatus $($HG root) $HG_ARGS
+st. = !hg __mystatus .
 pullr = pull --rebase
 
 [extensions]
