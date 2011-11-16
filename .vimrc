@@ -10,9 +10,7 @@ call pathogen#helptags()
 
 syntax on " Turn on that syntax highlighting
 
-let xterm16_brightness = '#ffffff'     " Change if needed 
-let xterm16_colormap = 'allblue'       " Change if needed 
-colorscheme xterm16
+colorscheme TigerStripe
 
 
 set autoindent " Copy indent from current line when starting a new line
@@ -23,7 +21,6 @@ set cursorline " Highligh the current line
 set directory=~/.vim/vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp " Store the file backups in a central place
 set hidden " Allow Vim to manage multiple buffers effectively
 set history=100 " Increase the search history
-" set hlsearch " When there is a previous search pattern, highlight all its matches
 set ignorecase " Ignore case in search patterns
 set incsearch " While typing a search command, show where the pattern, as it was typed
 set number " Show line numbers
@@ -34,12 +31,27 @@ set showmatch " Show matching bracets when text indicator is over them
 set showmode " At least let yourself know what mode you're in
 set smartcase " Case sensitive search when there is a capital letter in the pattern
 set smartindent " Do smart autoindenting when starting a new line
+set softtabstop=2
 set tabstop=2 " Number of spaces that a <Tab> in the file counts for
 set visualbell " Use visual bell instead of beeping
 set wildmode=list:longest,full " Enable enhanced command-line completion.
 set wrap " Wrap long lines
 
-au FileType python setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
+
+" Set up OmniCompletion
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType scss set omnifunc=csscomplete#CompleteCSS
+" Ctrl+X, Ctrl+O: OmniComplete
+" Ctrl+X, Ctrl+P: Complete keyword (any keyword in the file)
+" Ctrl+X, Ctrl+L: Complete the line (based on the lines in the file)
+
+
+" Higlight current line only in insert mode
+autocmd InsertLeave * set nocursorline
+autocmd InsertEnter * set cursorline
 
 
 " Hide the toolbar
@@ -47,7 +59,6 @@ if has("gui_running")
 	set guioptions-=T
 	set guifont=Inconsolata:h13
 endif
-
 
 
 " Better split switching (Ctrl-j, Ctrl-k, Ctrl-h, Ctrl-l)
@@ -95,6 +106,7 @@ let Tlist_Show_One_File = 1       " Only show tags for current buffer
 let Tlist_Enable_Fold_Column = 0  " no fold column (only showing one file)
 let tlist_sql_settings = 'sql;P:package;t:table'
 let tlist_ant_settings = 'ant;p:Project;r:Property;t:Target'
+
 
 " Ignore version control files for CtrlP
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*

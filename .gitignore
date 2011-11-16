@@ -4,6 +4,7 @@
 .android
 .bash_history
 .CFUserTextEncoding
+.ctrlp_cache/*
 .cups
 .deltafy
 .dvdcss
@@ -12,7 +13,9 @@
 .eclim
 .filebot
 .filezilla/bookmarks.xml
+.filezilla/filezilla.xml
 .filezilla/lockfile
+.filezilla/layout.xml
 .filezilla/recentservers.xml
 .filezilla/queue.sqlite3
 .filezilla/sitemanager.xml
@@ -20,6 +23,7 @@
 .gdb_history
 .gem
 .gitk
+.gstreamer-0.10/*
 .heroku
 .idlerc
 .ipython
@@ -38,7 +42,7 @@
 .titanium
 .viminfo
 .vim-fuf-data
-.vim/*
+.vim
 Applications
 bin
 Books

@@ -8,17 +8,18 @@ git_bundles = [
   "git://github.com/tpope/vim-surround.git",
   "git://github.com/tsaleh/vim-tcomment.git",
   "git://github.com/skammer/vim-css-color.git",
-  "git://github.com/ervandew/supertab.git",
+  "git://github.com/pangloss/vim-javascript.git",
   "git://github.com/vim-scripts/Gist.vim.git",
   "git://github.com/kien/ctrlp.vim.git",
   "git://github.com/vim-scripts/xterm16.vim.git",
+	"git://github.com/eddiemonge/TigerStripe.git",
 ]
 
 vim_org_scripts = [
   ["IndexedSearch", "7062",   "plugin"],
 
   # http://vim.sourceforge.net/scripts/script.php?script_id=1491
-  ["javascript",    "10728",  "syntax"],
+  #["javascript",    "10728",  "syntax"],
   # http://vim.sourceforge.net/scripts/script.php?script_id=1542
   ["pythoncomplete","10872",  "autoload"],
   # http://vim.sourceforge.net/scripts/script.php?script_id=1355

@@ -26,3 +26,5 @@ export PATH="/usr/local/bin/ctags:$PATH"
 export PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH"
 # Markdown
 export PATH="/usr/lib/Markdown_1.0:$PATH"
+# Dojo
+export DOJO_HOME="/usr/local/lib/dojo/1.6.1"
