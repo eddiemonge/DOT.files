@@ -96,6 +96,9 @@ let Tlist_Enable_Fold_Column = 0  " no fold column (only showing one file)
 let tlist_sql_settings = 'sql;P:package;t:table'
 let tlist_ant_settings = 'ant;p:Project;r:Property;t:Target'
 
+" Ignore version control files for CtrlP
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
+
 
 filetype plugin indent on
 
