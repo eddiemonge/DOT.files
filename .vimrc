@@ -26,7 +26,7 @@ set ignorecase " Ignore case in search patterns
 set incsearch " While typing a search command, show where the pattern, as it was typed
 set number " Show line numbers
 set ruler " Show the line and column number of the cursor position, separated by a comma
-set scrolloff=22 " Make the page scroll before the cursor gets to the bottom of the page
+set scrolloff=2 " Make the page scroll before the cursor gets to the bottom of the page
 set shiftwidth=2 " Match the tabstop
 set showmatch " Show matching bracets when text indicator is over them
 set showmode " At least let yourself know what mode you're in
