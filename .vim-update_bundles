@@ -37,7 +37,7 @@ bundles_dir = File.join(vim_dir, "bundle")
 
 FileUtils.cd(bundles_dir)
 
-puts "Trashing everything in ${bundles_dir} (lookout!)"
+puts "Trashing everything in #{bundles_dir} (lookout!)"
 Dir["*"].each {|d| FileUtils.rm_rf d }
 
 git_bundles.each do |url|
