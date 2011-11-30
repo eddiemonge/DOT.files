@@ -28,3 +28,8 @@ export PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH"
 export PATH="/usr/lib/Markdown_1.0:$PATH"
 # Dojo
 export DOJO_HOME="/usr/local/lib/dojo/1.6.1"
+
+# Custom Path
+if [ -f ~/.bash_profile_custom ]; then
+  source ~/.bash_profile_custom
+fi
