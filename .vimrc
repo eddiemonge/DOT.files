@@ -61,7 +61,7 @@ if has("gui_running")
   " Hide the toolbar
 	set guioptions-=T
   " Set the fint
-	set guifont=Inconsolata:h20
+	set guifont=Inconsolata:h13
 endif
 
 
