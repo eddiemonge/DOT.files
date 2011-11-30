@@ -3,6 +3,7 @@
 .adobe
 .android
 .bash_history
+.bash_profile_custom
 .CFUserTextEncoding
 .ctrlp_cache/*
 .cups
@@ -42,7 +43,7 @@
 .titanium
 .viminfo
 .vim-fuf-data
-.vim
+.vim/
 Applications
 bin
 Books
