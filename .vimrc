@@ -10,6 +10,7 @@ call pathogen#helptags()
 
 syntax on " Turn on that syntax highlighting
 
+
 colorscheme TigerStripe
 
 
@@ -55,11 +56,20 @@ autocmd InsertLeave * set nocursorline
 autocmd InsertEnter * set cursorline
 
 
-" Hide the toolbar
+" GUI Options
 if has("gui_running")
+  " Hide the toolbar
 	set guioptions-=T
-	set guifont=Inconsolata:h13
+  " Set the fint
+	set guifont=Inconsolata:h20
 endif
+
+
+" For Presentations
+" let xterm16_brightness = 'soft'     " Change if needed 
+" let xterm16_colormap = 'allblue'       " Change if needed 
+" colorscheme xterm16
+" set guifont=Inconsolata:h20
 
 
 " Better split switching (Ctrl-j, Ctrl-k, Ctrl-h, Ctrl-l)
