@@ -4,6 +4,7 @@
 .android
 .bash_history
 .bash_profile_custom
+.cache
 .CFUserTextEncoding
 .ctrlp_cache/*
 .cups
@@ -34,6 +35,7 @@
 .netbeans
 .pearrc
 .putty
+.rvm
 .ssh
 .Spotlight-V100
 .subversion
@@ -43,7 +45,6 @@
 .titanium
 .viminfo
 .vim-fuf-data
-.vim/
 Applications
 bin
 Books
@@ -61,4 +62,3 @@ share
 Sites
 VirtualBox*
 VMs
-
