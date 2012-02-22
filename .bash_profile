@@ -1,3 +1,8 @@
+# Secret info
+if [ -f ~/.secrets ]; then
+  source ~/.secrets
+fi
+
 # Prompt
 if [ -f ~/.bash_prompt ]; then
   source ~/.bash_prompt
