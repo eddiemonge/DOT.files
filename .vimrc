@@ -25,6 +25,9 @@ set hidden " Allow Vim to manage multiple buffers effectively
 set history=100 " Increase the search history
 set ignorecase " Ignore case in search patterns
 set incsearch " While typing a search command, show where the pattern, as it was typed
+set nobackup " Turn off swap file
+set nowb " Turn off swap file
+set noswapfile " Turn off swap file
 set number " Show line numbers
 set ruler " Show the line and column number of the cursor position, separated by a comma
 set scrolloff=2 " Make the page scroll before the cursor gets to the bottom of the page

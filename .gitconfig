@@ -1,9 +1,3 @@
-[user]
-  name = Eddie Monge
-  email = eddie@eddiemonge.com
-[github]
-  user = username
-  token = token
 [alias]
   br = branch
   ci = commit
@@ -40,3 +34,10 @@
   insteadOf = "github:"
 [core]
   editor = mvim -f
+	excludesfile = /Users/eddie/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

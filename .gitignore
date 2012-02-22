@@ -33,9 +33,11 @@
 .MacOSX
 .mysql_history
 .netbeans
+.npm
 .pearrc
 .putty
 .rvm
+.secrets
 .ssh
 .Spotlight-V100
 .subversion
@@ -43,6 +45,7 @@
 .Trash
 .Trashes
 .titanium
+.vimgolf
 .viminfo
 .vim-fuf-data
 Applications
