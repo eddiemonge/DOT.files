@@ -6,12 +6,10 @@ git_bundles = [
   "git://github.com/scrooloose/nerdtree.git",
   "git://github.com/tpope/vim-repeat.git",
   "git://github.com/tpope/vim-surround.git",
-  "git://github.com/tsaleh/vim-tcomment.git",
   "git://github.com/skammer/vim-css-color.git",
   "git://github.com/pangloss/vim-javascript.git",
   "git://github.com/vim-scripts/Gist.vim.git",
   "git://github.com/kien/ctrlp.vim.git",
-  "git://github.com/vim-scripts/xterm16.vim.git",
 	"git://github.com/eddiemonge/TigerStripe.git",
 ]
 
