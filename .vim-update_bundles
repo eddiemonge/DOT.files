@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 
 git_bundles = [ 
-  "git://github.com/walm/jshint.vim.git",
+  "git://github.com/wookiehangover/jshint.vim.git",
+  "git://github.com/scrooloose/syntastic.git",
   "git://github.com/msanders/snipmate.vim.git",
   "git://github.com/scrooloose/nerdtree.git",
   "git://github.com/tpope/vim-repeat.git",

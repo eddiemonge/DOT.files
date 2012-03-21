@@ -33,6 +33,7 @@
 .MacOSX
 .mysql_history
 .netbeans
+.node_modules
 .npm
 .pearrc
 .putty
@@ -65,3 +66,4 @@ share
 Sites
 VirtualBox*
 VMs
+Virtual*

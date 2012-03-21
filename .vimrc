@@ -113,6 +113,10 @@ nmap <F5> :NERDTreeToggle<CR>
 map <LEADER>c <c-_><c-_>
 
 
+" Syntax checker
+let g:syntastic_javascript_checker = "jshint"
+
+
 " Commands for TagList
 noremap <silent> <F6> :TlistToggle<CR>
 let Tlist_Exit_OnlyWindow = 1     " exit if taglist is last window open
