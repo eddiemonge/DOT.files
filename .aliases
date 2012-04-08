@@ -12,6 +12,7 @@ alias vimdiff="mvim -d"
 alias startvm="VBoxManage startvm --type headless"
 alias vbox="VBoxManage controlvm"
 alias hgstash="hg diff > stash.diff;hg revert --no-backup --all;hg pullr;patch -p1 < stash.diff;rm stash.diff"
+alias wget="curl -O"
 
 
 # Development stuff
