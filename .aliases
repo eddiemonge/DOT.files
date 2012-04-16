@@ -18,3 +18,5 @@ alias wget="curl -O"
 # Development stuff
 alias edithosts="sudo mvim /etc/hosts"
 alias gitsync="git pull upstream master && git push origin master"
+alias editdevtools="vim ~/Library/Application\ Support/Google/Chrome/Default/User\ StyleSheets/Custom.css"
+alias opendevtools="open ~/Library/Application\ Support/Google/Chrome/Default/User\ StyleSheets/"
