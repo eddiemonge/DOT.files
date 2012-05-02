@@ -9,14 +9,12 @@ alias web="cd /Users/eddie/Sites"
 alias g="git"
 alias vim="mvim"
 alias vimdiff="mvim -d"
-alias startvm="VBoxManage startvm --type headless"
-alias vbox="VBoxManage controlvm"
-alias hgstash="hg diff > stash.diff;hg revert --no-backup --all;hg pullr;patch -p1 < stash.diff;rm stash.diff"
 alias wget="curl -O"
 
 
 # Development stuff
 alias edithosts="sudo mvim /etc/hosts"
+alias editvhosts="vim /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf"
 alias gitsync="git pull upstream master && git push origin master"
 alias editdevtools="vim ~/Library/Application\ Support/Google/Chrome/Default/User\ StyleSheets/Custom.css"
 alias opendevtools="open ~/Library/Application\ Support/Google/Chrome/Default/User\ StyleSheets/"

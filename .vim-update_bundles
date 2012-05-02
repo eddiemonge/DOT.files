@@ -1,17 +1,17 @@
 #!/usr/bin/env ruby
 
 git_bundles = [ 
-  "git://github.com/wookiehangover/jshint.vim.git",
-  "git://github.com/scrooloose/syntastic.git",
-  "git://github.com/msanders/snipmate.vim.git",
-  "git://github.com/scrooloose/nerdtree.git",
-  "git://github.com/tpope/vim-repeat.git",
-  "git://github.com/tpope/vim-surround.git",
-  "git://github.com/skammer/vim-css-color.git",
-  "git://github.com/pangloss/vim-javascript.git",
-  "git://github.com/vim-scripts/Gist.vim.git",
-  "git://github.com/kien/ctrlp.vim.git",
-	"git://github.com/eddiemonge/TigerStripe.git",
+  "https://github.com/wookiehangover/jshint.vim.git",
+  "https://github.com/scrooloose/syntastic.git",
+  "https://github.com/msanders/snipmate.vim.git",
+  "https://github.com/scrooloose/nerdtree.git",
+  "https://github.com/tpope/vim-repeat.git",
+  "https://github.com/tpope/vim-surround.git",
+  "https://github.com/skammer/vim-css-color.git",
+  "https://github.com/pangloss/vim-javascript.git",
+  "https://github.com/vim-scripts/Gist.vim.git",
+  "https://github.com/kien/ctrlp.vim.git",
+	"https://github.com/eddiemonge/TigerStripe.git",
 ]
 
 vim_org_scripts = [
