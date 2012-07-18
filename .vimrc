@@ -44,7 +44,6 @@ set wrap " Wrap long lines
 
 
 " Set up OmniCompletion
-autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
@@ -61,15 +60,16 @@ autocmd InsertEnter * set cursorline
 
 " GUI Options
 if has("gui_running")
-  " Hide the toolbar
+    " Hide the toolbar
 	set guioptions-=T
-  " Set the fint
-	set guifont=Inconsolata:h13
+
+" Normal
+    " Set the font
+    set guifont=Inconsolata:h13
 
 " For Presentations
-" colorscheme morning
-" set guifont=Inconsolata:h24
-" set nonumber
+    "colorscheme morning
+    "set guifont=Inconsolata:h24
 endif
 
 

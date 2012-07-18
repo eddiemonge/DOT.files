@@ -26,6 +26,7 @@ fi
 # Path Stuff
 # Local bins
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH=/opt/subversion/bin:$PATH
 
 # RVM 
 [[ -s "/Users/eddie/.rvm/scripts/rvm" ]] && source "/Users/eddie/.rvm/scripts/rvm"
