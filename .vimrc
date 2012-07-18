@@ -20,7 +20,7 @@ set backspace=indent,eol,start " Intuitive backspacing in insert mode
 set backupdir=~/.vim/vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp " Store the file backups in a central place
 set cursorline " Highligh the current line
 set directory=~/.vim/vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp " Store the file backups in a central place
-set expandtab
+set expandtab " Expand tabstops to spaces
 set hidden " Allow Vim to manage multiple buffers effectively
 set history=100 " Increase the search history
 set ignorecase " Ignore case in search patterns
@@ -30,14 +30,14 @@ set nowb " Turn off swap file
 set noswapfile " Turn off swap file
 set number " Show line numbers
 set ruler " Show the line and column number of the cursor position, separated by a comma
-set scrolloff=2 " Make the page scroll before the cursor gets to the bottom of the page
-set shiftwidth=2 " Match the tabstop
+set scrolloff=1 " Make the page scroll before the cursor gets to the bottom of the page
+set shiftwidth=4 " Match the tabstop
 set showmatch " Show matching bracets when text indicator is over them
 set showmode " At least let yourself know what mode you're in
 set smartcase " Case sensitive search when there is a capital letter in the pattern
 set smartindent " Do smart autoindenting when starting a new line
-set softtabstop=2
-set tabstop=2 " Number of spaces that a <Tab> in the file counts for
+set softtabstop=4
+set tabstop=4 " Number of spaces that a <Tab> in the file counts for
 set visualbell " Use visual bell instead of beeping
 set wildmode=list:longest,full " Enable enhanced command-line completion.
 set wrap " Wrap long lines
