@@ -1,30 +1,19 @@
 #!/usr/bin/env ruby
 
 git_bundles = [ 
-  "https://github.com/wookiehangover/jshint.vim.git",
-  "https://github.com/scrooloose/syntastic.git",
-  "https://github.com/msanders/snipmate.vim.git",
-  "https://github.com/scrooloose/nerdtree.git",
-  "https://github.com/tpope/vim-repeat.git",
-  "https://github.com/tpope/vim-surround.git",
-  "https://github.com/skammer/vim-css-color.git",
-  "https://github.com/pangloss/vim-javascript.git",
-  "https://github.com/vim-scripts/Gist.vim.git",
-  "https://github.com/kien/ctrlp.vim.git",
-	"https://github.com/eddiemonge/TigerStripe.git",
-]
-
-vim_org_scripts = [
-  ["IndexedSearch", "7062",   "plugin"],
-
-  # http://vim.sourceforge.net/scripts/script.php?script_id=1491
-  #["javascript",    "10728",  "syntax"],
-  # http://vim.sourceforge.net/scripts/script.php?script_id=1542
-  ["pythoncomplete","10872",  "autoload"],
-  # http://vim.sourceforge.net/scripts/script.php?script_id=1355
-  ["php-doc",       "4666",   "plugin"],
-  # http://vim.sourceforge.net/scripts/script.php?script_id=273
-  ["TagList",       "7701",   "zip"],
+    "https://github.com/wookiehangover/jshint.vim.git",
+    "https://github.com/scrooloose/syntastic.git",
+    "https://github.com/msanders/snipmate.vim.git",
+    "https://github.com/scrooloose/nerdtree.git",
+    "https://github.com/tpope/vim-repeat.git",
+    "https://github.com/tpope/vim-surround.git",
+    "https://github.com/skammer/vim-css-color.git",
+    "https://github.com/pangloss/vim-javascript.git",
+    "https://github.com/vim-scripts/Gist.vim.git",
+    "https://github.com/kvim-scripts/taglist.vim.git",
+    "https://github.com/henrik/vim-indexed-search.git",
+    "https://github.com/kien/ctrlp.vim.git",
+    "https://github.com/eddiemonge/TigerStripe.git",
 ]
 
 require 'fileutils'
@@ -46,19 +35,3 @@ git_bundles.each do |url|
   FileUtils.rm_rf(File.join(dir, ".git"))
 end
 
-vim_org_scripts.each do |name, script_id, script_type|
-  puts "  Downloading #{name}"
-  if script_type == 'zip'
-    local_file = File.join(name, "#{name}.#{script_type}")
-  else
-    local_file = File.join(name, script_type, "#{name}.vim")
-  end
-  FileUtils.mkdir_p(File.dirname(local_file))
-  File.open(local_file, "w") do |file|
-    file << open("http://www.vim.org/scripts/download_script.php?src_id=#{script_id}").read
-  end
-  if script_type == 'zip'
-    `unzip #{local_file} -d #{name}`
-    FileUtils.rm_rf(local_file)
-  end
-end
