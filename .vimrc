@@ -20,27 +20,30 @@ set backspace=indent,eol,start " Intuitive backspacing in insert mode
 set backupdir=~/.vim/vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp " Store the file backups in a central place
 set cursorline " Highligh the current line
 set directory=~/.vim/vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp " Store the file backups in a central place
-set expandtab " Expand tabstops to spaces
 set hidden " Allow Vim to manage multiple buffers effectively
 set history=100 " Increase the search history
 set ignorecase " Ignore case in search patterns
 set incsearch " While typing a search command, show where the pattern, as it was typed
 set nobackup " Turn off swap file
-set nowb " Turn off swap file
+set nowritebackup " Turn off swap file
 set noswapfile " Turn off swap file
 set number " Show line numbers
 set ruler " Show the line and column number of the cursor position, separated by a comma
 set scrolloff=1 " Make the page scroll before the cursor gets to the bottom of the page
-set shiftwidth=4 " Match the tabstop
 set showmatch " Show matching bracets when text indicator is over them
 set showmode " At least let yourself know what mode you're in
 set smartcase " Case sensitive search when there is a capital letter in the pattern
 set smartindent " Do smart autoindenting when starting a new line
-set softtabstop=4
-set tabstop=4 " Number of spaces that a <Tab> in the file counts for
 set visualbell " Use visual bell instead of beeping
 set wildmode=list:longest,full " Enable enhanced command-line completion.
 set wrap " Wrap long lines
+
+
+" Control tabs/spaces/column displays
+set noexpandtab " Expand tab to spaces
+set shiftwidth=4 " How many columns text is indented with the reindent operations (<< and >>). For modifying text
+set softtabstop=4 " Set softtabstop to control how many columns vim uses when you hit Tab in insert mode. If softtabstop is less than tabstop and expandtab is not set, vim will use a combination of tabs and spaces to make up the desired spacing. If softtabstop equals tabstop and expandtab is not set, vim will always use tabs. When expandtab is set, vim will always use the appropriate number of spaces
+set tabstop=4 " How many columns a tab counts for. For displaying text
 
 
 " Set up OmniCompletion
@@ -129,6 +132,9 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 
 
 filetype plugin indent on
+
+" SS is for HTML, not LISP
+au BufNewFile,BufRead *.ss set filetype=html
 
 
 " Autocorrect spelling
