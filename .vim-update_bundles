@@ -10,10 +10,18 @@ git_bundles = [
     "https://github.com/skammer/vim-css-color.git",
     "https://github.com/pangloss/vim-javascript.git",
     "https://github.com/vim-scripts/Gist.vim.git",
-    "https://github.com/kvim-scripts/taglist.vim.git",
+    "https://github.com/vim-scripts/taglist.vim.git",
     "https://github.com/henrik/vim-indexed-search.git",
     "https://github.com/kien/ctrlp.vim.git",
     "https://github.com/eddiemonge/TigerStripe.git",
+    "https://github.com/tpope/vim-fugitive.git",
+    "https://github.com/vim-scripts/IndentAnything.git",
+    "https://github.com/vim-scripts/JavaScript-Indent.git",
+    "https://github.com/Lokaltog/vim-easymotion.git",
+    "https://github.com/mattn/zencoding-vim.git",
+    "https://github.com/michalliu/jsoncodecs.vim.git",
+    "https://github.com/michalliu/jsruntime.vim.git",
+    "https://github.com/michalliu/sourcebeautify.vim.git",
 ]
 
 require 'fileutils'
