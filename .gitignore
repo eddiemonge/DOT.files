@@ -2,10 +2,12 @@
 .aliases_custom
 .adobe
 .android
+.aspera
 .bash_history
 .bash_profile_custom
 .cache
 .CFUserTextEncoding
+.config
 .ctrlp_cache/*
 .cups
 .deltafy
@@ -33,10 +35,12 @@
 .MacOSX
 .mysql_history
 .netbeans
+.node-gyp
 .node_modules
 .npm
 .pearrc
 .putty
+.rnd
 .rvm
 .secrets
 .ssh
@@ -49,6 +53,9 @@
 .vimgolf
 .viminfo
 .vim-fuf-data
+.zcompdump
+.zsh-update
+.zsh_history
 Applications
 bin
 Books
@@ -63,6 +70,7 @@ Music
 Pictures
 Public
 share
+Settings
 Sites
 VirtualBox*
 VMs
