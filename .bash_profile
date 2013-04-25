@@ -1,27 +1,7 @@
-# Secret info
-if [ -f ~/.secrets ]; then
-  source ~/.secrets
-fi
-
-# Prompt
-if [ -f ~/.bash_prompt ]; then
-  source ~/.bash_prompt
-fi
-
-# Aliases
-if [ -f ~/.aliases ]; then
-  source ~/.aliases
-fi
-
-# Custom Aliases on a per computer basis
-if [ -f ~/.aliases_custom ]; then
-	source ~/.aliases_custom
-fi
-
-# Custom Path
-if [ -f ~/.bash_profile_custom ]; then
-  source ~/.bash_profile_custom
-fi
+for file in ~/.{secrets,bash_prompt,aliases,aliases_custom,bash_profile_custom,functions}; do
+	[ -r "$file" ] && source "$file"
+done
+unset file
 
 # Path Stuff
 # Local bins
@@ -33,3 +13,4 @@ export PATH="/Applications/Android/platform-tools:$PATH"
 
 # RVM 
 [[ -s "/Users/eddie/.rvm/scripts/rvm" ]] && source "/Users/eddie/.rvm/scripts/rvm"
+export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
