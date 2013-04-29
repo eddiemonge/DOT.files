@@ -14,3 +14,6 @@ export PATH="/Applications/Android/platform-tools:$PATH"
 # RVM 
 [[ -s "/Users/eddie/.rvm/scripts/rvm" ]] && source "/Users/eddie/.rvm/scripts/rvm"
 export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
+
+# Set vi as default editor for svn
+export SVN_EDITOR=vim
