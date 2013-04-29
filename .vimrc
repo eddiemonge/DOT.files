@@ -102,6 +102,11 @@ nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
 
+" Use sessions easier
+map <F2> :mksession! ~/.vim_session <cr> " Quick write session with F2
+map <F3> :source ~/.vim_session <cr>     " And load session with F3
+
+
 " Map the leader character to the comma key
 let mapleader = ","
 
