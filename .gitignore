@@ -52,6 +52,7 @@
 .titanium
 .vimgolf
 .viminfo
+.vim_session
 .vim-fuf-data
 .zcompdump
 .zsh-update
