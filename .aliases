@@ -2,6 +2,7 @@
 alias ..='cd ..'
 alias ~='cd ~'
 alias ll="ls -alh"
+function cdl { cd $1; ll;}
 alias web="cd /Users/eddie/Sites"
 
 
