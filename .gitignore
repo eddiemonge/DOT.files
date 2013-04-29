@@ -30,6 +30,7 @@
 .gitk
 .gstreamer-0.10/*
 .heroku
+.irb-history
 .idlerc
 .ipython
 .lesshst
