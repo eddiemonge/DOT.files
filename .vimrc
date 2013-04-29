@@ -4,7 +4,7 @@ set nocompatible
 
 " Pathogen
 filetype off
-call pathogen#runtime_append_all_bundles()
+call pathogen#incubate()
 call pathogen#helptags() 
 
 
@@ -40,10 +40,10 @@ set wrap " Wrap long lines
 
 
 " Control tabs/spaces/column displays
-set noexpandtab " Expand tab to spaces
-set shiftwidth=4 " How many columns text is indented with the reindent operations (<< and >>). For modifying text
-set softtabstop=4 " Set softtabstop to control how many columns vim uses when you hit Tab in insert mode. If softtabstop is less than tabstop and expandtab is not set, vim will use a combination of tabs and spaces to make up the desired spacing. If softtabstop equals tabstop and expandtab is not set, vim will always use tabs. When expandtab is set, vim will always use the appropriate number of spaces
-set tabstop=4 " How many columns a tab counts for. For displaying text
+set expandtab " Expand tab to spaces
+set shiftwidth=2 " How many columns text is indented with the reindent operations (<< and >>). For modifying text
+set softtabstop=2 " Set softtabstop to control how many columns vim uses when you hit Tab in insert mode. If softtabstop is less than tabstop and expandtab is not set, vim will use a combination of tabs and spaces to make up the desired spacing. If softtabstop equals tabstop and expandtab is not set, vim will always use tabs. When expandtab is set, vim will always use the appropriate number of spaces
+set tabstop=2 " How many columns a tab counts for. For displaying text
 
 
 " Set up OmniCompletion
