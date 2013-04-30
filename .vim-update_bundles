@@ -12,8 +12,6 @@ git_bundles = [
     "https://github.com/scrooloose/syntastic.git",
     # Adds a file browser to the sidebar
     "https://github.com/scrooloose/nerdtree.git",
-    # Moves the file browser to its own tab
-    "https://github.com/jistr/vim-nerdtree-tabs.git",
 
 
     # My color scheme
