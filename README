@@ -10,12 +10,12 @@ pip install --upgrade distribute
 pip install --upgrade pip
 brew install macvim --env-std --override-system-vim
 pip install --user git+git://github.com/Lokaltog/powerline 
-brew install ack
 
 # possibly
 # cd /usr/local/Cellar/macvim/7.3-66/MacVim.app/Contents/MacOS/
 # install_name_tool -change /System/Library/Frameworks/Python.framework/Versions/2.7/Python /usr/local/Cellar/python/2.7.4/Frameworks/Python.framework/Versions/2.7/Python MacVim
 # install_name_tool -change /System/Library/Frameworks/Python.framework/Versions/2.7/Python /usr/local/Cellar/python/2.7.4/Frameworks/Python.framework/Versions/2.7/Python Vim
+brew install ack
 
 ~/.vim-update_bundles
 These are my custom DOTfiles. 
