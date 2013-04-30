@@ -69,7 +69,7 @@ if has("gui_running")
 
   " Normal
     " Set the font
-    set guifont="Inconsolata for Powerline":h13
+    set guifont=Inconsolata\ for\ Powerline:h13
 
   " For Presentations
     "colorscheme morning
