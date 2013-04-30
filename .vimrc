@@ -44,6 +44,7 @@ set wrap " Wrap long lines
 set expandtab " Expand tab to spaces
 set shiftwidth=2 " How many columns text is indented with the reindent operations (<< and >>). For modifying text
 set softtabstop=2 " Set softtabstop to control how many columns vim uses when you hit Tab in insert mode. If softtabstop is less than tabstop and expandtab is not set, vim will use a combination of tabs and spaces to make up the desired spacing. If softtabstop equals tabstop and expandtab is not set, vim will always use tabs. When expandtab is set, vim will always use the appropriate number of spaces
+set smarttab
 set tabstop=2 " How many columns a tab counts for. For displaying text
 
 
@@ -130,7 +131,7 @@ nmap <F5> :NERDTreeToggle<CR>
 
 
 " Change the command for TComment
-map <LEADER>c <c-_><c-_>
+"map <LEADER>c <c-_><c-_>
 
 
 " Syntax checker
@@ -138,22 +139,32 @@ let g:syntastic_javascript_checker = "jshint"
 
 
 " Commands for TagList
-noremap <silent> <F6> :TlistToggle<CR>
-let Tlist_Exit_OnlyWindow = 1     " exit if taglist is last window open
-let Tlist_Show_One_File = 1       " Only show tags for current buffer
-let Tlist_Enable_Fold_Column = 0  " no fold column (only showing one file)
-let tlist_sql_settings = 'sql;P:package;t:table'
-let tlist_ant_settings = 'ant;p:Project;r:Property;t:Target'
+"noremap <silent> <F6> :TlistToggle<CR>
+"let Tlist_Exit_OnlyWindow = 1     " exit if taglist is last window open
+"let Tlist_Show_One_File = 1       " Only show tags for current buffer
+"let Tlist_Enable_Fold_Column = 0  " no fold column (only showing one file)
+"let tlist_sql_settings = 'sql;P:package;t:table'
+"let tlist_ant_settings = 'ant;p:Project;r:Property;t:Target'
 
+
+
+" JavaScript Code Folding
+syntax region foldBraces start=/{/ end=/}/ transparent fold keepend extend
+setlocal foldmethod=syntax
+setlocal foldlevel=99
+
+
+" ctrlP related things
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
 
 " Ignore version control files for CtrlP
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 
 filetype plugin indent on
-
-" SS is for HTML, not LISP
-au BufNewFile,BufRead *.ss set filetype=html
 
 
 " Autocorrect spelling
