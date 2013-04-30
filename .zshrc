@@ -31,5 +31,8 @@ plugins=(brew bower git npm sublime svn svn-n)
 
 source $ZSH/oh-my-zsh.sh
 
+PS1="
+$PS1"
+
 # Customize to your needs...
 source $HOME/.bash_profile
