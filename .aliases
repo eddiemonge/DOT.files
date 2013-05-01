@@ -34,6 +34,7 @@ alias editvhosts="vim /etc/apache2/extra/httpd-vhosts.conf"
 alias gitsync="git pull upstream master && git push origin master"
 
 
+alias ctagruby="ctags -R --languages=ruby --exclude=.svn"
 
 
 ### Functions
