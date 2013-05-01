@@ -36,7 +36,9 @@ PS1="
 $PS1"
 
 # Add a separate after the command to make it easier to distinguish output
-preexec () { echo "<><><><><><><><><><><><><><><><><><><><><><><><><><><><><>"; }
+preexec () { 
+  printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+}
 
 # Customize to your needs...
 source $HOME/.bash_profile
