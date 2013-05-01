@@ -16,6 +16,7 @@ brew install macvim --env-std --override-system-vim
 pip install --user git+git://github.com/Lokaltog/powerline 
 
 pip install pygments
+brew install wget
 
 # possibly
 # cd /usr/local/Cellar/macvim/7.3-66/MacVim.app/Contents/MacOS/
