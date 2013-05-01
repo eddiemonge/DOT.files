@@ -8,6 +8,7 @@
 .bower
 .cache
 .CFUserTextEncoding
+.composer
 .config
 .ctrlp_cache/*
 .cups
@@ -35,6 +36,7 @@
 .ipython
 .lesshst
 .MacOSX
+.Makemkv
 .mysql_history
 .netbeans
 .node-gyp
