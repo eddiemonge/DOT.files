@@ -43,6 +43,7 @@
 .node_modules
 .npm
 .pearrc
+.post-review-cookies.txt
 .putty
 .rnd
 .rvm
