@@ -1,6 +1,4 @@
 # Dir navigation
-alias ..='cd ..'
-alias ~='cd ~'
 alias ll="ls -alh"
 function cdl { cd $1; ll;}
 alias web="cd /Users/eddie/Sites"
@@ -8,6 +6,7 @@ alias web="cd /Users/eddie/Sites"
 
 # Utilities
 alias g="git"
+alias gs="git svn"
 alias vim="mvim"
 alias vdiff="mvim -d"
 alias v="mvim"
