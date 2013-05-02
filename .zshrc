@@ -33,7 +33,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Make commands come after a new line to distinguish output
 PS1="
-$PS1"
+$PS1
+"
 
 # Add a separate after the command to make it easier to distinguish output
 preexec () { 
