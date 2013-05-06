@@ -158,6 +158,10 @@ setlocal foldmethod=syntax
 setlocal foldlevel=99
 
 
+" Search for the word under the cursor
+map <F4> :execute "vimgrep /" . expand("<cword>") . "/j ./**" <Bar> cw<CR>
+
+
 " ctrlP related things
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
