@@ -63,6 +63,10 @@ autocmd InsertLeave * set nocursorline
 autocmd InsertEnter * set cursorline
 
 
+" Strip trailing spaces on save
+autocmd FileType javascript,css,scss,erb,haml,php autocmd BufWritePre <buffer> :%s/\s\+$//e
+
+
 " GUI Options
 if has("gui_running")
   " Hide the toolbar
