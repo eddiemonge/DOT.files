@@ -105,3 +105,8 @@ Explanations:
     Ctrl-W K     moves the current window to full-width at the very top
     Ctrl-W H     moves the current window to full-height at far left
 The Ctrl-W t part can be ignored if only two windows
+
+
+Sessions:
+F2 Save a session
+F3 Restore a session
