@@ -1,4 +1,4 @@
-for file in ~/.{secrets,bash_prompt,aliases,aliases_custom,bash_profile_custom,functions}; do
+for file in ~/.{secrets,aliases,aliases_custom,functions}; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
@@ -16,5 +16,6 @@ export PATH="/Applications/Android/platform-tools:$PATH"
 [[ -s "/Users/eddie/.rvm/scripts/rvm" ]] && source "/Users/eddie/.rvm/scripts/rvm"
 export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
 
-# Set vi as default editor for svn
+# Set vim as default editor
 export SVN_EDITOR=vim
+export EDITOR=vim
