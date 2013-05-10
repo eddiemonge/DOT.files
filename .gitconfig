@@ -5,6 +5,7 @@
   df = diff
   pb = publish-branch
   st = status
+  ms = merge --squash
 [color]
   ui = auto
 [color "branch"]
@@ -38,9 +39,6 @@
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [user]
 	name = Eddie Monge
 	email = eddie@eddiemonge.com
