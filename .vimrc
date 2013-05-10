@@ -139,7 +139,7 @@ nmap <F5> :NERDTreeToggle<CR>
 
 
 " Syntax checker
-let g:syntastic_javascript_checker = "jshint"
+let g:syntastic_javascript_checkers = ["jshint"]
 
 
 " Commands for TagList
