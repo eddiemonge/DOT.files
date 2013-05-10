@@ -103,30 +103,20 @@ git_bundles = [
     # gc(motion) Toggle comments
     "https://github.com/tpope/vim-commentary.git",
 ]
-=begin
-    # Plugins I am not sure about
-    "https://github.com/vim-scripts/taglist.vim.git",
-    "https://github.com/vim-scripts/IndentAnything.git",
-    "https://github.com/vim-scripts/JavaScript-Indent.git",
-]
-=end
 
 require 'fileutils'
 require 'open-uri'
 
-vim_dir = File.join(File.expand_path('~'), ".vim")
-
-bundles_dir = File.join(vim_dir, "bundle")
+bundles_dir = File.join( File.join(File.expand_path('~'), ".vim"), "bundle")
 
 FileUtils.cd(bundles_dir)
 
 puts "Trashing everything in #{bundles_dir} (lookout!)"
+
 Dir["*"].each {|d| FileUtils.rm_rf d }
 
 git_bundles.each do |url|
-  dir = url.split('/').last.sub(/\.git$/, '')
-  puts "  Unpacking #{url} into #{dir}"
-  `git clone #{url} #{dir}`
-  FileUtils.rm_rf(File.join(dir, ".git"))
+  puts "  Unpacking #{url} "
+  `git clone #{url}`
 end
 
