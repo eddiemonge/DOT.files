@@ -7,6 +7,7 @@ unset file
 # Local bins
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="/usr/local/share/python:$PATH"
+export PATH="/usr/local/share/npm/bin:$PATH"
 export PATH="/usr/local/git/bin:$PATH"
 export PATH="/opt/subversion/bin:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
