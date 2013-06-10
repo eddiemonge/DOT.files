@@ -6,7 +6,7 @@ git_bundles = [
     # :JSHintReload reload all .jshintrc option files.
     # :JSHintToggle enable or disable jshint validation
     # Add options to ~/.jshintrc
-    "https://github.com/sleistner/vim-jshint.git",
+    "https://github.com/wookiehangover/jshint.vim.git",
 
 
     # Adds syntax error checking, think the >> on the side showing errors
