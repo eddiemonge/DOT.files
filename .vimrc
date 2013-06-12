@@ -108,7 +108,7 @@ map <C-S-Tab> :bprevious<cr>
 
 
 " Remap :W to :w
-command W w
+command! W w
 
 
 " Swap the backtick and single quote buttons
