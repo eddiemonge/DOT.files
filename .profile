@@ -12,6 +12,7 @@ export PATH="/usr/local/git/bin:$PATH"
 export PATH="/opt/subversion/bin:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
 export PATH="/Applications/Android/platform-tools:$PATH"
+export PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
 
 # RVM 
 [[ -s "/Users/eddie/.rvm/scripts/rvm" ]] && source "/Users/eddie/.rvm/scripts/rvm"
