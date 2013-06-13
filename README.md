@@ -33,6 +33,8 @@ Setup Instructions:
 
     brew install ack
 
+    pip install --user git+git://github.com/Lokaltog/powerline
+
     ~/.vim-update_bundles
 
 # possibly
