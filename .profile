@@ -8,6 +8,7 @@ unset file
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="/usr/local/share/python:$PATH"
 export PATH="/usr/local/git/bin:$PATH"
+export PATH="/usr/local/git/bin/git:$PATH"
 export PATH="/opt/subversion/bin:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
 export PATH="/Applications/Android/platform-tools:$PATH"
