@@ -29,7 +29,7 @@ set nobackup " Turn off swap file
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 set nowritebackup " Turn off swap file
 set noswapfile " Turn off swap file
-set number " Show line numbers
+set relativenumber " Show relative line numbers, instead of line numbers
 set ruler " Show the line and column number of the cursor position, separated by a comma
 set scrolloff=1 " Make the page scroll before the cursor gets to the bottom of the page
 set showmatch " Show matching bracets when text indicator is over them
@@ -108,7 +108,7 @@ map <C-S-Tab> :bprevious<cr>
 
 
 " Remap :W to :w
-command W w
+command! W w
 
 
 " Swap the backtick and single quote buttons
