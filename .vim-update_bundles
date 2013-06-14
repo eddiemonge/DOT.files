@@ -19,6 +19,10 @@ git_bundles = [
     "https://github.com/eddiemonge/TigerStripe.git",
 
 
+    # Number toggling
+    "https://github.com/jeffkreeftmeijer/vim-numbertoggle.git",
+
+
     # Change the surrounding elements
     # cs"' to change quotes inside
     # cs'<em> to change quote to a block
