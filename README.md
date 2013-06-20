@@ -39,6 +39,10 @@ Setup Instructions:
 
     ~/.vim-update_bundles
 
+# OSX settings:
+    defaults write com.apple.dock pinning -string end # move the dock to a corner
+    
+    
 # possibly
     cd /usr/local/Cellar/macvim/7.3-66/MacVim.app/Contents/MacOS/
     install_name_tool -change /System/Library/Frameworks/Python.framework/Versions/2.7/Python /usr/local/Cellar/python/2.7.4/Frameworks/Python.framework/Versions/2.7/Python MacVim
