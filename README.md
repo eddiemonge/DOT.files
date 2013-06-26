@@ -30,6 +30,8 @@ Setup Instructions:
     pip install pygments
 
     brew install wget
+    wget http://www.levien.com/type/myfonts/Inconsolata.otf && open Inconsolata.otf
+    wget https://github.com/Lokaltog/powerline-fonts/raw/master/Inconsolata/Inconsolata%20for%20Powerline.otf && open Inconsolata\ for\ Powerline.otf
 
     brew install ack
 
@@ -37,6 +39,10 @@ Setup Instructions:
 
     ~/.vim-update_bundles
 
+# OSX settings:
+    defaults write com.apple.dock pinning -string end # move the dock to a corner
+    
+    
 # possibly
     cd /usr/local/Cellar/macvim/7.3-66/MacVim.app/Contents/MacOS/
     install_name_tool -change /System/Library/Frameworks/Python.framework/Versions/2.7/Python /usr/local/Cellar/python/2.7.4/Frameworks/Python.framework/Versions/2.7/Python MacVim
