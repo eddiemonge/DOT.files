@@ -24,11 +24,13 @@
 .gitk
 .heroku
 .irb-history
+.lesshst
 .MacOSX
 .Makemkv
 .node-gyp
 .node_modules
 .npm
+.pearrc
 .post-review-cookies.txt
 .putty
 .reviewboardrc
@@ -45,6 +47,7 @@
 .titanium
 .viminfo
 .vim_session
+.yeoman
 .zcompdump
 .zsh-update
 .zsh_history

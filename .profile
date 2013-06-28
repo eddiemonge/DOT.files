@@ -6,7 +6,6 @@ unset file
 # Path Stuff
 # Local bins
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-export PATH="/usr/local/share/python:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 export PATH="/usr/local/git/bin:$PATH"
 export PATH="/usr/local/git/bin/git:$PATH"

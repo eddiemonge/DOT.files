@@ -15,6 +15,9 @@ git_bundles = [
     "https://github.com/scrooloose/nerdtree.git",
 
 
+    # Add CoffeeScript support
+    "https://github.com/kchmck/vim-coffee-script.git",
+
     # My color scheme
     "https://github.com/eddiemonge/TigerStripe.git",
 
