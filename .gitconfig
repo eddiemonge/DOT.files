@@ -44,3 +44,5 @@
 	email = eddie@eddiemonge.com
 [credential]
 	helper = osxkeychain
+[push]
+	default = matching
