@@ -78,7 +78,7 @@ if has("gui_running")
 
   " For Presentations
     " colorscheme morning
-    " set guifont=Inconsolata:h24
+    " set guifont=Inconsolata\ for\ Powerline:h24
 endif
 
 
