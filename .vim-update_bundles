@@ -109,6 +109,9 @@ git_bundles = [
     # Toggle comments on lines
     # gc(motion) Toggle comments
     "https://github.com/tpope/vim-commentary.git",
+
+    # Allow editorconfig files
+    "https://github.com/editorconfig/editorconfig-vim.git",
 ]
 
 require 'fileutils'
