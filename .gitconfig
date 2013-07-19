@@ -1,40 +1,40 @@
 [alias]
-  br = branch
-  ci = commit
-  co = checkout
-  df = diff
-  pb = publish-branch
-  st = status
-  ms = merge --squash
+	br = branch
+	ci = commit
+	co = checkout
+	df = diff
+	pb = publish-branch
+	st = status
+	ms = merge --squash
 [color]
-  ui = auto
+	ui = auto
 [color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
+	current = yellow reverse
+	local = yellow
+	remote = green
 [color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+	added = yellow
+	changed = green
+	untracked = cyan
 [merge]
-  log = true
+	log = true
 [difftool "Kaleidoscope"]
-  cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 [rerere]
-  enabled = 1
+	enabled = 1
 [url "git@github.com:"]
-  insteadOf = "gh:"
-  pushInsteadOf = "github:"
-  pushInsteadOf = "git://github.com/"
+	insteadOf = "gh:"
+	pushInsteadOf = "github:"
+	pushInsteadOf = "git://github.com/"
 [url "git://github.com/"]
-  insteadOf = "github:"
+	insteadOf = "github:"
 [core]
-  editor = mvim -f
+	editor = mvim -f
 	excludesfile = /Users/eddie/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
@@ -44,5 +44,7 @@
 	email = eddie@eddiemonge.com
 [credential]
 	helper = osxkeychain
+[reviewboard]
+	url = https://codereview.asperasoft.com
 [push]
 	default = matching
