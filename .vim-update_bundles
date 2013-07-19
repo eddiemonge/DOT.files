@@ -10,13 +10,20 @@ git_bundles = [
 
 
     # Adds syntax error checking, think the >> on the side showing errors
-    "https://github.com/scrooloose/syntastic.git",
+    # "https://github.com/scrooloose/syntastic.git",
+
+
     # Adds a file browser to the sidebar
     "https://github.com/scrooloose/nerdtree.git",
 
 
     # Add CoffeeScript support
     "https://github.com/kchmck/vim-coffee-script.git",
+
+
+    # Add Jade support
+    "https://github.com/digitaltoad/vim-jade.git",
+
 
     # My color scheme
     "https://github.com/eddiemonge/TigerStripe.git",
@@ -37,8 +44,8 @@ git_bundles = [
     "https://github.com/tpope/vim-surround.git",
     # Be able to repeat the previous block of plugins
     "https://github.com/tpope/vim-repeat.git",
-    # A plugin for HAML
-    "https://github.com/tpope/vim-haml.git",
+
+
     # A wrapper for git
     # :Gedit/Gsplit/Gvsplit to edit the file and stage it on save
     # :Gdiff to view the changes
@@ -48,11 +55,7 @@ git_bundles = [
     # :Gmove
     # :Gbrowse to see the file on github
     "https://github.com/tpope/vim-fugitive.git",
-    # Rails related vim things. Too much docs for here. See 
-    # https://github.com/tpope/vim-rails for instructions
-    "https://github.com/tpope/vim-rails.git",
-    # Bundle support in vim. Uses :Bundle
-    "https://github.com/tpope/vim-bundler.git",
+
     # Smart function endings for ruby
     "https://github.com/tpope/vim-endwise.git",
 
@@ -61,8 +64,8 @@ git_bundles = [
     "https://github.com/Lokaltog/powerline.git",
 
     
-    # Show the actual color in CSS for the colors
-    "https://github.com/skammer/vim-css-color.git",
+    # SASS helper
+    "https://github.com/cakebaker/scss-syntax.vim.git",
 
 
     # JavaScript highlighting and indentation
@@ -109,6 +112,7 @@ git_bundles = [
     # Toggle comments on lines
     # gc(motion) Toggle comments
     "https://github.com/tpope/vim-commentary.git",
+
 
     # Allow editorconfig files
     "https://github.com/editorconfig/editorconfig-vim.git",
