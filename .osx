@@ -3,3 +3,6 @@ defaults write com.apple.dock pinning -string end
 
 # Disable dashboard
 defaults write com.apple.dashboard mcx-disabled -boolean YES && killall Dock
+
+# Hide the spotlight icon
+sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search; killall SystemUIServer
