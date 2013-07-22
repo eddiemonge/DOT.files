@@ -15,8 +15,7 @@ export PATH="/Applications/Android/platform-tools:$PATH"
 export PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
 
 # RVM 
-[[ -s "/Users/eddie/.rvm/scripts/rvm" ]] && source "/Users/eddie/.rvm/scripts/rvm"
-export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
+export PATH="/usr/local/opt/ruby/bin:$PATH" # Add Ruby/gem to PATH for scripting
 
 # Set vim as default editor
 export SVN_EDITOR=vim
