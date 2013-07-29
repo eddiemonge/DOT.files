@@ -39,9 +39,6 @@ Setup Instructions:
 
     ~/.vim-update_bundles
 
-# OSX settings:
-    defaults write com.apple.dock pinning -string end # move the dock to a corner
-    
     
 # possibly
     cd /usr/local/Cellar/macvim/7.3-66/MacVim.app/Contents/MacOS/
