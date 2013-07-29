@@ -13,6 +13,8 @@ export PATH="/opt/subversion/bin:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
 export PATH="/Applications/Android/platform-tools:$PATH"
 export PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
+  
+export PHANTOMJS_BIN=$(which phantomjs)
 
 # RVM 
 export PATH="/usr/local/opt/ruby/bin:$PATH" # Add Ruby/gem to PATH for scripting
