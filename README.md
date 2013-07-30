@@ -25,8 +25,6 @@ Setup Instructions:
     pip install --upgrade pip
 
     brew install macvim --env-std --override-system-vim
-    pip install --user git+git://github.com/Lokaltog/powerline 
-
     pip install pygments
 
     brew install wget
@@ -36,7 +34,6 @@ Setup Instructions:
     brew install ack
 
     pip install --user git+git://github.com/Lokaltog/powerline
-
     ~/.vim-update_bundles
 
     
