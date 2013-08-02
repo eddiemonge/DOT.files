@@ -8,7 +8,7 @@ alias npmlib="cd /usr/local/share/npm/lib/node_modules && ll"
 # Utilities
 alias g="git"
 alias gs="git svn"
-alias gupfolder="find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull upstream master \;"
+alias gupfolder="find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull --rebase upstream master \;"
 alias vim="mvim"
 alias vdiff="mvim -d"
 alias vimdiff="mvim -d"
