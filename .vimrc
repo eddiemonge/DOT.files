@@ -142,7 +142,7 @@ setlocal foldlevel=99
 
 " NerdTree stuff
 nmap <F5> :NERDTreeToggle<CR>
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\v.DS_Store|.sass-cache|.bundle|.git|.hg|.svn|node_modules|vendor|bower_components$']
 
 
