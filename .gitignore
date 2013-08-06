@@ -30,6 +30,7 @@
 .node-gyp
 .node_modules
 .npm
+.npmrc
 .pearrc
 .post-review-cookies.txt
 .putty
