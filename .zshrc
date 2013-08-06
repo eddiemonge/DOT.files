@@ -12,7 +12,7 @@ export ZSH_THEME="agnoster"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew bower git npm sublime svn svn-n)
+plugins=(git svn svn-n)
 
 source $ZSH/oh-my-zsh.sh
 
