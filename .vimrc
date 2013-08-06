@@ -85,12 +85,12 @@ endif
 " Powerline status bar
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 if ! has('gui_running')
-    set ttimeoutlen=10
-    augroup FastEscape
-        autocmd!
-        au InsertEnter * set timeoutlen=0
-        au InsertLeave * set timeoutlen=1000
-    augroup END
+  set ttimeoutlen=10
+  augroup FastEscape
+    autocmd!
+    au InsertEnter * set timeoutlen=0
+    au InsertLeave * set timeoutlen=1000
+  augroup END
 endif
 
 
@@ -130,26 +130,8 @@ map <F3> :source ~/.vim_session <cr>     " And load session with F3
 let mapleader = ","
 
 
-" NerdTree stuff
-nmap <F5> :NERDTreeToggle<CR>
-
-
-" Change the command for TComment
-"map <LEADER>c <c-_><c-_>
-
-
 " Syntax checker
 let g:syntastic_javascript_checkers = ["jshint"]
-
-
-" Commands for TagList
-"noremap <silent> <F6> :TlistToggle<CR>
-"let Tlist_Exit_OnlyWindow = 1     " exit if taglist is last window open
-"let Tlist_Show_One_File = 1       " Only show tags for current buffer
-"let Tlist_Enable_Fold_Column = 0  " no fold column (only showing one file)
-"let tlist_sql_settings = 'sql;P:package;t:table'
-"let tlist_ant_settings = 'ant;p:Project;r:Property;t:Target'
-
 
 
 " JavaScript Code Folding
@@ -157,6 +139,11 @@ syntax region foldBraces start=/{/ end=/}/ transparent fold keepend extend
 setlocal foldmethod=syntax
 setlocal foldlevel=99
 
+
+" NerdTree stuff
+nmap <F5> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+let NERDTreeIgnore = ['\v.DS_Store|.sass-cache|.bundle|.git|.hg|.svn|node_modules|vendor|bower_components$']
 
 
 " ctrlP related things
@@ -166,7 +153,7 @@ let g:ctrlp_working_path_mode = 'ra'
 
 " Ignore version control files for CtrlP
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/tmp/*,*.so,*.swp,*.zip
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = '\v.DS_Store|.sass-cache|.bundle|.git|.hg|.svn|node_modules|vendor|bower_components$'
 
 
 filetype plugin indent on
