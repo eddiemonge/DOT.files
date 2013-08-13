@@ -11,8 +11,8 @@ Setup Instructions:
 # Copy all the files to home directory
 # Command line instructions after installing homebrew
 
-# Install rvm
-    \curl -#L https://get.rvm.io | bash -s stable --autolibs=3 --ruby
+# Install ruby
+    brew install ruby
 
 # Install zsh
     brew install zsh
@@ -35,10 +35,3 @@ Setup Instructions:
 
     pip install --user git+git://github.com/Lokaltog/powerline
     ~/.vim-update_bundles
-
-    
-# possibly
-    cd /usr/local/Cellar/macvim/7.3-66/MacVim.app/Contents/MacOS/
-    install_name_tool -change /System/Library/Frameworks/Python.framework/Versions/2.7/Python /usr/local/Cellar/python/2.7.4/Frameworks/Python.framework/Versions/2.7/Python MacVim
-    install_name_tool -change /System/Library/Frameworks/Python.framework/Versions/2.7/Python /usr/local/Cellar/python/2.7.4/Frameworks/Python.framework/Versions/2.7/Python Vim
-
