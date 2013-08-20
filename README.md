@@ -8,11 +8,9 @@ app specific files that don't matter to version control.
 
 Setup Instructions:
 
-# Copy all the files to home directory
+# Copy all the files to home directory ( ~/ )
+# Install homebrew on mac
 # Command line instructions after installing homebrew
-
-# Install ruby
-    brew install ruby
 
 # Install zsh
     brew install zsh
@@ -32,6 +30,8 @@ Setup Instructions:
     wget https://github.com/Lokaltog/powerline-fonts/raw/master/Inconsolata/Inconsolata%20for%20Powerline.otf && open Inconsolata\ for\ Powerline.otf
 
     brew install ack
+
+    brew install node
 
     pip install --user git+git://github.com/Lokaltog/powerline
     ~/.vim-update_bundles
