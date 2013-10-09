@@ -25,6 +25,10 @@ set history=100 " Increase the search history
 set ignorecase " Ignore case in search patterns
 set incsearch " While typing a searc:h command, show where the pattern, as it was typed
 set laststatus=2 " Always display the statusline in all windows
+set list " Show the characters defined in listchars
+set listchars=tab:»·,trail:·,extends:▶,precedes:◀,conceal:▓,nbsp:␣
+" Highlight unwanted spaces
+highlight SpecialKey ctermbg=red guibg=red guifg=yellow
 set nobackup " Turn off swap file
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 set nowritebackup " Turn off swap file
@@ -70,7 +74,7 @@ autocmd FileType javascript,css,scss,erb,haml,php autocmd BufWritePre <buffer> :
 " GUI Options
 if has("gui_running")
   " Hide the toolbar
-	set guioptions-=T
+  set guioptions-=T
 
   " Normal
     " Set the font
@@ -170,4 +174,3 @@ iab aslo      also
 iab Aslo      Also
 iab becuase   because
 iab Becuase   Because
- 
