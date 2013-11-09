@@ -45,3 +45,7 @@
   url = https://codereview.asperasoft.com
 [push]
   default = matching
+[remote "origin"]
+  fetch = +refs/pull/*/head:refs/remotes/origin/pr/*
+[remote "upstream"]
+  fetch = +refs/pull/*/head:refs/remotes/upstream/pr/*
