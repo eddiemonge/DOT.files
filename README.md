@@ -6,19 +6,21 @@ There are a lot of ignored files because I don't want them tracked or they are
 app specific files that don't matter to version control.
 
 
-Setup Instructions:
+### Setup Instructions:
 
-# Copy all the files to home directory ( ~/ )
-# Install homebrew on mac
-# Command line instructions after installing homebrew
+* Copy all the files to home directory ( ~/ )
+* Install homebrew on mac
 
-# Install zsh
+### Command line instructions after installing homebrew
+
+#### Install zsh
     brew install zsh
 
-# Edit /etc/shells and add /usr/local/bin/zsh
+#### Edit /etc/shells and add /usr/local/bin/zsh
     chsh -s $(which zsh)
 
     brew install python
+    pip install --upgrade setuptools
     pip install --upgrade distribute
     pip install --upgrade pip
 
@@ -35,3 +37,5 @@ Setup Instructions:
 
     pip install --user git+git://github.com/Lokaltog/powerline
     ~/.vim-update_bundles
+    
+    brew linkapps
