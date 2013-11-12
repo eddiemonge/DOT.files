@@ -49,7 +49,7 @@
 .viminfo
 .vim_session
 .yeoman
-.zcompdump
+.zcompdump*
 .zsh-update
 .zsh_history
 Applications
