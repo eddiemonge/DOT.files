@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
-var git_bundles = [
+'use strict';
+
+var gitBundles = [
   // JSHint integration.
   // Manually call with :JSHint
   // :JSHintReload reload all .jshintrc option files.
@@ -11,6 +13,15 @@ var git_bundles = [
 
   // Adds a file browser to the sidebar
   'https://github.com/scrooloose/nerdtree.git',
+
+
+  // CSS helpers
+  'https://github.com/cakebaker/scss-syntax.vim.git',
+  'https://github.com/wavded/vim-stylus.git',
+
+
+  // JavaScript highlighting and indentation
+  'https://github.com/pangloss/vim-javascript.git',
 
 
   // Add CoffeeScript support
@@ -46,15 +57,6 @@ var git_bundles = [
   'https://github.com/Lokaltog/powerline.git',
 
 
-  // CSS helpers
-  'https://github.com/cakebaker/scss-syntax.vim.git',
-  'https://github.com/wavded/vim-stylus.git',
-
-
-  // JavaScript highlighting and indentation
-  'https://github.com/pangloss/vim-javascript.git',
-
-
   // Shows the number of matches in a search
   'https://github.com/henrik/vim-indexed-search.git',
 
@@ -67,16 +69,6 @@ var git_bundles = [
   // Easily jump to location.
   // ,,w for words. ,,f{query} for searches
   'https://github.com/Lokaltog/vim-easymotion.git',
-
-
-  // Zencoding plugin.
-  // type in the string html:5 then press , ctl+y+,
-  // Tutorial at https://raw.github.com/mattn/zencoding-vim/master/TUTORIAL
-  'https://github.com/mattn/zencoding-vim.git',
-
-
-  // Vim ruby
-  'https://github.com/vim-ruby/vim-ruby.git',
 
 
   // ACK for searching
@@ -105,13 +97,13 @@ var sys = require('sys');
 var exec = require('child_process').exec;
 var fs = require('fs');
 var path = require('path');
-var bundles_dir = path.normalize('.vim/bundle');
+var bundles = path.normalize('.vim/bundle');
 
-emptyFolderRecursive = function(dir) {
+var emptyFolderRecursive = function(dir) {
   var files = [];
   if( fs.existsSync(dir) ) {
     files = fs.readdirSync(dir);
-    files.forEach(function(file,index) {
+    files.forEach(function(file) {
       var curPath = path.normalize(dir + '/' + file);
       if(fs.statSync(curPath).isDirectory()) { // recurse
         emptyFolderRecursive(curPath);
@@ -123,23 +115,23 @@ emptyFolderRecursive = function(dir) {
   }
 };
 
+console.log('Trashing everything in '+bundles+' (lookout!)');
 
-console.log('Trashing everything in '+bundles_dir+' (lookout!)');
 try {
-  emptyFolderRecursive(bundles_dir);
-  fs.mkdirSync(bundles_dir);
-  process.chdir(bundles_dir);
+  emptyFolderRecursive(bundles);
+  fs.mkdirSync(bundles);
+  process.chdir(bundles);
   console.log('Moving to ' + process.cwd());
 }
 catch (e) {
   console.log(e);
 }
 
-git_bundles.forEach(function(plugin) {
-  console.time(plugin+'');
-  exec('git clone '+plugin, function( e, out, err ) {
+gitBundles.forEach(function(plugin) {
+  console.time(plugin);
+  exec('git clone '+plugin, function(e,out) {
     console.log('----------------');
     sys.print(out);
-    console.timeEnd(plugin+'');
+    console.timeEnd(plugin);
   });
 });
