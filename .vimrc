@@ -5,7 +5,7 @@ set nocompatible
 " Pathogen
 filetype off
 call pathogen#incubate()
-call pathogen#helptags() 
+call pathogen#helptags()
 
 
 syntax on " Turn on that syntax highlighting
