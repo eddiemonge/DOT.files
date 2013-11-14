@@ -2,16 +2,15 @@
 set nocompatible
 
 
-" Pathogen
+" Vundle
 filetype off
-call pathogen#incubate()
-call pathogen#helptags()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle'
 
 
 syntax on " Turn on that syntax highlighting
-
-
-colorscheme TigerStripe
 
 
 set autoindent " Copy indent from current line when starting a new line
@@ -98,7 +97,6 @@ if ! has('gui_running')
 endif
 
 
-
 " Better split switching (Ctrl-j, Ctrl-k, Ctrl-h, Ctrl-l)
 map <C-j> <C-W>j
 map <C-k> <C-W>k
@@ -154,6 +152,8 @@ let NERDTreeIgnore = ['\v.DS_Store|.sass-cache|.bundle|.git|.hg|.svn|node_module
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_user_command = "find %s -type f | egrep -v '/\.(git|hg|svn|sass-cache|bundle|DS_Store|tmp)|node_module|vendor|bower_components|solr|tmp/' | egrep -v '\.(png|exe|jpg|gif|svg)$'"
 
 " Ignore version control files for CtrlP
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/tmp/*,*.so,*.swp,*.zip
@@ -174,3 +174,93 @@ iab aslo      also
 iab Aslo      Also
 iab becuase   because
 iab Becuase   Because
+
+
+" Code helpers
+inoremap { {}<left>
+inoremap ( ()<left>
+
+
+" My Bundles
+" JSHint integration.
+" Manually call with :JSHint
+" :JSHintReload reload all .jshintrc option files.
+" :JSHintToggle enable or disable jshint validation
+" Add options to ~/.jshintrc
+Bundle 'wookiehangover/jshint.vim'
+
+" Adds a file browser to the sidebar
+Bundle 'scrooloose/nerdtree'
+
+" CSS helpers
+Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'wavded/vim-stylus'
+
+" JavaScript highlighting and indentation
+Bundle 'pangloss/vim-javascript'
+
+" Add CoffeeScript support
+Bundle 'kchmck/vim-coffee-script'
+
+" Add Jade support
+Bundle 'digitaltoad/vim-jade'
+
+" Line number toggling
+Bundle 'jeffkreeftmeijer/vim-numbertoggle'
+
+" Easily find strings or replace in files
+" vv to fond the current word
+" vr search for the word and prompt for replacement
+Bundle 'vim-scripts/EasyGrep'
+
+" Testing line hints
+Bundle 'tomtom/quickfixsigns_vim'
+
+" Change the surrounding elements
+" cs'' to change quotes inside
+" cs'<em> to change quote to a block
+" cst' change a block to quotes
+" ds' or dst to remove surrounding
+" ysiw' surround a word
+" yss' surround line
+" VS<p> adding surround with visual editor
+Bundle 'tpope/vim-surround'
+" Be able to repeat the previous block of plugins
+Bundle 'tpope/vim-repeat'
+
+" Powerline status bar
+Bundle 'Lokaltog/powerline'
+
+" Shows the number of matches in a search
+Bundle 'henrik/vim-indexed-search'
+
+" Quickly open any file
+" See https:"github.com/kien/ctrlp.vim for documentation
+Bundle 'kien/ctrlp.vim'
+
+" Easily jump to location.
+" ,w for words. ,,f{query} for searches
+Bundle 'Lokaltog/vim-easymotion'
+
+" ACK for searching
+" :Ack [options] {pattern} [{directory}]
+" go   to preview file (open but maintain focus on ack.vim results)
+" t    to open in new tab
+" T    to open in new tab silently
+" h    to open in horizontal split
+" H    to open in horizontal split silently
+" v    to open in vertical split
+" gv   to open in vertical split silently
+" q    to close the quickfix window
+Bundle 'mileszs/ack.vim'
+
+" Toggle comments on lines
+" gc(motion) Toggle comments
+Bundle 'tpope/vim-commentary'
+
+" Allow editorconfig files
+Bundle 'editorconfig/editorconfig-vim'
+
+" My color scheme
+Bundle 'eddiemonge/TigerStripe'
+colorscheme TigerStripe
