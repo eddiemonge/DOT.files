@@ -40,3 +40,5 @@ app specific files that don't matter to version control.
     vim +BundleInstall +qall
     
     brew linkapps
+    
+    ./.osx
