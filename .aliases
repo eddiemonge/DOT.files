@@ -7,7 +7,7 @@ alias npmlib="cd /usr/local/share/npm/lib/node_modules && ll"
 
 # Utilities
 alias g="git"
-alias gs="git svn"
+alias gs="/usr/bin/git svn"
 alias grma="git ls-files --deleted -z | xargs -0 git rm"
 alias vim="mvim"
 alias vdiff="mvim -d"
