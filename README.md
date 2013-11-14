@@ -1,17 +1,16 @@
-These are my custom DOTfiles. 
+# My custom DOTfiles
 
 They go into the user's home directory
 
 There are a lot of ignored files because I don't want them tracked or they are
 app specific files that don't matter to version control.
 
+## Setup Instructions:
 
-### Setup Instructions:
-
-* Copy all the files to home directory ( ~/ )
-
+    git clone --recursive https://github.com/eddiemonge/DOT.files.git ~/DOTS
+    mv ~/DOTS/* ~/
+    mv ~/DOTS/* ~/
     cd ~
-    git submodule init && git submodule update
 
     ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 
@@ -31,8 +30,8 @@ app specific files that don't matter to version control.
 
     pip install pygments
 
-    wget http://www.levien.com/type/myfonts/Inconsolata.otf && open Inconsolata.otf
-    wget https://github.com/Lokaltog/powerline-fonts/raw/master/Inconsolata/Inconsolata%20for%20Powerline.otf && open Inconsolata\ for\ Powerline.otf
+    wget http://www.levien.com/type/myfonts/Inconsolata.otf && open Inconsolata.otf && rm Inconsolata.otf
+    wget https://github.com/Lokaltog/powerline-fonts/raw/master/Inconsolata/Inconsolata%20for%20Powerline.otf && open Inconsolata\ for\ Powerline.otf && rm Inconsolata\ for\ Powerline.otf
 
     pip install --user git+git://github.com/Lokaltog/powerline
 
