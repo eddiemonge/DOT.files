@@ -9,33 +9,34 @@ app specific files that don't matter to version control.
 ### Setup Instructions:
 
 * Copy all the files to home directory ( ~/ )
-* Install homebrew on mac
 
-### Command line instructions after installing homebrew
+    cd ~
+    git submodule init && git submodule update
 
-#### Install zsh
+    ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+
     brew install zsh
 
-#### Edit /etc/shells and add /usr/local/bin/zsh
+    which zsh | sudo tee -a /etc/shells
+
     chsh -s $(which zsh)
 
-    brew install python
+    brew install python wget ack node
+
     pip install --upgrade setuptools
     pip install --upgrade distribute
     pip install --upgrade pip
 
     brew install macvim --env-std --override-system-vim
+
     pip install pygments
 
-    brew install wget
     wget http://www.levien.com/type/myfonts/Inconsolata.otf && open Inconsolata.otf
     wget https://github.com/Lokaltog/powerline-fonts/raw/master/Inconsolata/Inconsolata%20for%20Powerline.otf && open Inconsolata\ for\ Powerline.otf
 
-    brew install ack
-
-    brew install node
-
     pip install --user git+git://github.com/Lokaltog/powerline
-    ~/.vim-update_bundles
+
+    git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+    vim +BundleInstall +qall
     
     brew linkapps
