@@ -35,6 +35,10 @@ app specific files that don't matter to version control.
 
     pip install --user git+git://github.com/Lokaltog/powerline
 
+    git clone https://github.com/eddiemonge/TigerStripe.git ~/.vim/colors/TigerStripe
+    mv ~/.vim/colors/TigerStripe/colors/TigerStripe.vim ~/.vim/colors/TigerStripe.vim
+    rm -rf ~/.vim/colors/TigerStripe
+    
     git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
     vim +BundleInstall +qall
     
