@@ -9,6 +9,89 @@ call vundle#rc()
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
+" My Bundles
+" JSHint integration.
+" Manually call with :JSHint
+" :JSHintReload reload all .jshintrc option files.
+" :JSHintToggle enable or disable jshint validation
+" Add options to ~/.jshintrc
+Bundle 'wookiehangover/jshint.vim'
+
+" Adds a file browser to the sidebar
+Bundle 'scrooloose/nerdtree'
+
+" CSS helpers
+Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'wavded/vim-stylus'
+
+" JavaScript highlighting and indentation
+" Bundle 'pangloss/vim-javascript'
+
+" Add CoffeeScript support
+Bundle 'kchmck/vim-coffee-script'
+
+" Add Jade support
+Bundle 'digitaltoad/vim-jade'
+
+" JSON highlighting
+Bundle 'elzr/vim-json'
+
+" Line number toggling
+Bundle 'jeffkreeftmeijer/vim-numbertoggle'
+
+" Easily find strings or replace in files
+" vv to fond the current word
+" vr search for the word and prompt for replacement
+Bundle 'vim-scripts/EasyGrep'
+
+" Testing line hints
+Bundle 'tomtom/quickfixsigns_vim'
+
+" Change the surrounding elements
+" cs'' to change quotes inside
+" cs'<em> to change quote to a block
+" cst' change a block to quotes
+" ds' or dst to remove surrounding
+" ysiw' surround a word
+" yss' surround line
+" VS<p> adding surround with visual editor
+Bundle 'tpope/vim-surround'
+" Be able to repeat the previous block of plugins
+Bundle 'tpope/vim-repeat'
+
+" Powerline status bar
+Bundle 'Lokaltog/powerline'
+
+" Shows the number of matches in a search
+Bundle 'henrik/vim-indexed-search'
+
+" Quickly open any file
+" See https:"github.com/kien/ctrlp.vim for documentation
+Bundle 'kien/ctrlp.vim'
+
+" Easily jump to location.
+" ,w for words. ,,f{query} for searches
+Bundle 'Lokaltog/vim-easymotion'
+
+" ACK for searching
+" :Ack [options] {pattern} [{directory}]
+" go   to preview file (open but maintain focus on ack.vim results)
+" t    to open in new tab
+" T    to open in new tab silently
+" h    to open in horizontal split
+" H    to open in horizontal split silently
+" v    to open in vertical split
+" gv   to open in vertical split silently
+" q    to close the quickfix window
+Bundle 'mileszs/ack.vim'
+
+" Toggle comments on lines
+" gc(motion) Toggle comments
+Bundle 'tpope/vim-commentary'
+
+" Allow editorconfig files
+Bundle 'editorconfig/editorconfig-vim'
+
 
 syntax on " Turn on that syntax highlighting
 
@@ -67,10 +150,11 @@ autocmd InsertEnter * set cursorline
 
 
 " Strip trailing spaces on save
-autocmd FileType javascript,css,scss,erb,haml,php autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType javascript,css,scss,erb,haml,php,coffee,json autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 
 " GUI Options
+colorscheme TigerStripe
 if has("gui_running")
   " Hide the toolbar
   set guioptions-=T
@@ -160,9 +244,6 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = '\v.DS_Store|.sass-cache|.bundle|.git|.hg|.svn|node_modules|vendor|bower_components$'
 
 
-filetype plugin indent on
-
-
 " Autocorrect spelling
 iab teh       the
 iab Teh       The
@@ -181,86 +262,6 @@ inoremap { {}<left>
 inoremap ( ()<left>
 
 
-" My Bundles
-" JSHint integration.
-" Manually call with :JSHint
-" :JSHintReload reload all .jshintrc option files.
-" :JSHintToggle enable or disable jshint validation
-" Add options to ~/.jshintrc
-Bundle 'wookiehangover/jshint.vim'
 
-" Adds a file browser to the sidebar
-Bundle 'scrooloose/nerdtree'
 
-" CSS helpers
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'wavded/vim-stylus'
-
-" JavaScript highlighting and indentation
-Bundle 'pangloss/vim-javascript'
-
-" Add CoffeeScript support
-Bundle 'kchmck/vim-coffee-script'
-
-" Add Jade support
-Bundle 'digitaltoad/vim-jade'
-
-" Line number toggling
-Bundle 'jeffkreeftmeijer/vim-numbertoggle'
-
-" Easily find strings or replace in files
-" vv to fond the current word
-" vr search for the word and prompt for replacement
-Bundle 'vim-scripts/EasyGrep'
-
-" Testing line hints
-Bundle 'tomtom/quickfixsigns_vim'
-
-" Change the surrounding elements
-" cs'' to change quotes inside
-" cs'<em> to change quote to a block
-" cst' change a block to quotes
-" ds' or dst to remove surrounding
-" ysiw' surround a word
-" yss' surround line
-" VS<p> adding surround with visual editor
-Bundle 'tpope/vim-surround'
-" Be able to repeat the previous block of plugins
-Bundle 'tpope/vim-repeat'
-
-" Powerline status bar
-Bundle 'Lokaltog/powerline'
-
-" Shows the number of matches in a search
-Bundle 'henrik/vim-indexed-search'
-
-" Quickly open any file
-" See https:"github.com/kien/ctrlp.vim for documentation
-Bundle 'kien/ctrlp.vim'
-
-" Easily jump to location.
-" ,w for words. ,,f{query} for searches
-Bundle 'Lokaltog/vim-easymotion'
-
-" ACK for searching
-" :Ack [options] {pattern} [{directory}]
-" go   to preview file (open but maintain focus on ack.vim results)
-" t    to open in new tab
-" T    to open in new tab silently
-" h    to open in horizontal split
-" H    to open in horizontal split silently
-" v    to open in vertical split
-" gv   to open in vertical split silently
-" q    to close the quickfix window
-Bundle 'mileszs/ack.vim'
-
-" Toggle comments on lines
-" gc(motion) Toggle comments
-Bundle 'tpope/vim-commentary'
-
-" Allow editorconfig files
-Bundle 'editorconfig/editorconfig-vim'
-
-" My color scheme
-Bundle 'eddiemonge/TigerStripe'
-colorscheme TigerStripe
+filetype plugin indent on
