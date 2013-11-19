@@ -1,5 +1,5 @@
 # Default user name
-DEFAULT_USER=eddie
+DEFAULT_USER=`whoami`
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
