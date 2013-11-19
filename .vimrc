@@ -25,7 +25,7 @@ Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'wavded/vim-stylus'
 
 " JavaScript highlighting and indentation
-" Bundle 'pangloss/vim-javascript'
+Bundle 'pangloss/vim-javascript'
 
 " Add CoffeeScript support
 Bundle 'kchmck/vim-coffee-script'
@@ -40,8 +40,8 @@ Bundle 'elzr/vim-json'
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 
 " Easily find strings or replace in files
-" vv to fond the current word
-" vr search for the word and prompt for replacement
+" ,vv to fond the current word
+" ,vr search for the word and prompt for replacement
 Bundle 'vim-scripts/EasyGrep'
 
 " Testing line hints
@@ -70,7 +70,7 @@ Bundle 'henrik/vim-indexed-search'
 Bundle 'kien/ctrlp.vim'
 
 " Easily jump to location.
-" ,w for words. ,,f{query} for searches
+" ,,f{query} for searches
 Bundle 'Lokaltog/vim-easymotion'
 
 " ACK for searching
@@ -91,6 +91,10 @@ Bundle 'tpope/vim-commentary'
 
 " Allow editorconfig files
 Bundle 'editorconfig/editorconfig-vim'
+
+
+" Work with Git
+Bundle 'tpope/vim-fugitive'
 
 
 syntax on " Turn on that syntax highlighting
