@@ -101,13 +101,13 @@ app specific files that don't matter to version control.
 ### Working with split windows
 * `Ctrl-W t Ctrl-W K` To change two vertically split windows to horizonally split
 * `Ctrl-W t Ctrl-W H` Horizontally to vertically:
-    
+
 Explanations:
 
     Ctrl-W t     makes the first (topleft) window current
     Ctrl-W K     moves the current window to full-width at the very top
     Ctrl-W H     moves the current window to full-height at far left
-    
+
 The Ctrl-W t part can be ignored if only two windows
 
 
