@@ -21,3 +21,6 @@ export PATH="/usr/local/opt/ruby/bin:$PATH" # Add Ruby/gem to PATH for scripting
 # Set vim as default editor
 export SVN_EDITOR=vim
 export EDITOR=vim
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
