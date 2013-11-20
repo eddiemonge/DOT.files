@@ -1,6 +1,7 @@
 # Dir navigation
 alias ll="ls -alh"
 function cdl { cd $1; ll;}
+unalias md
 function md { mkdir -p $1; cd $_ }
 alias web="cd /Users/`whoami`/Sites"
 alias npmlib="cd /usr/local/share/npm/lib/node_modules && ll"
