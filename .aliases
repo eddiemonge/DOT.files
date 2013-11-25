@@ -15,6 +15,7 @@ alias vim="mvim"
 alias vdiff="mvim -d"
 alias vimdiff="mvim -d"
 alias v="mvim"
+alias vinstall="vim +BundleInstall +qall"
 alias zshreload="source ~/.zshrc"
 alias zshconfig="v ~/.zshrc"
 
