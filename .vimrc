@@ -25,7 +25,7 @@ Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'wavded/vim-stylus'
 
 " JavaScript highlighting and indentation
-Bundle 'pangloss/vim-javascript'
+Bundle 'eddiemonge/vim-javascript'
 
 " Add CoffeeScript support
 Bundle 'kchmck/vim-coffee-script'
