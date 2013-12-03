@@ -262,10 +262,18 @@ iab Becuase   Because
 
 
 " Code helpers
-inoremap { {}<left>
-inoremap ( ()<left>
-
-
+autocmd FileType javascript,css,sass call AUTOCOMPLETES()
+fu! AUTOCOMPLETES()
+  inoremap { {<Space><Space>}<Left><Left>
+  inoremap {<Enter> {<Enter>}<Esc>O
+  inoremap (<Space> (<Space><Space>)<Left><Left>
+  inoremap (<Enter> (<Enter>)<Esc>O
+  inoremap [ [<Space><Space>]<Left><Left>
+  inoremap [<Enter> [<Enter>]<Esc>O
+  inoremap ' ''<Left>
+  inoremap " ""<Left>
+  inoremap func<Tab> function<Space>(<Space><Space>) {<Enter>}<Esc>?<Space>)<Enter>i
+endfu
 
 
 filetype plugin indent on
