@@ -15,6 +15,9 @@ plugins=(git svn svn-n)
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+export RBENV_ROOT=/usr/local/var/rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
 source $ZSH/oh-my-zsh.sh
 
 # Make commands come after a new line to distinguish output
