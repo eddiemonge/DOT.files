@@ -264,14 +264,27 @@ iab Becuase   Because
 " Code helpers
 autocmd FileType javascript,css,sass call AUTOCOMPLETES()
 fu! AUTOCOMPLETES()
+  inoremap < <><Left>
+  inoremap </ </><Left>
+  inoremap << <
+  inoremap <> <>
   inoremap { {<Space><Space>}<Left><Left>
-  inoremap {<Enter> {<Enter>}<Esc>O
+  inoremap {<CR> {<CR>}<Esc>O
+  inoremap {{ {
+  inoremap {} {}
+  inoremap ( ()<Left>
   inoremap (<Space> (<Space><Space>)<Left><Left>
-  inoremap (<Enter> (<Enter>)<Esc>O
+  inoremap (<CR> (<CR>)<Esc>O
+  inoremap (( (
+  inoremap () ()
   inoremap [ [<Space><Space>]<Left><Left>
-  inoremap [<Enter> [<Enter>]<Esc>O
+  inoremap [<CR> [<CR>]<Esc>O
+  inoremap [[ [
+  inoremap [] []
   inoremap ' ''<Left>
+  inoremap '' ''
   inoremap " ""<Left>
+  inoremap "" ""
   inoremap func<Tab> function<Space>(<Space><Space>) {<Enter>}<Esc>?<Space>)<Enter>i
 endfu
 
