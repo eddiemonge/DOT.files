@@ -20,7 +20,7 @@ app specific files that don't matter to version control.
 
     chsh -s $(which zsh)
 
-    brew install python wget ack node
+    brew install python wget ack node cmake rbenv
 
     pip install --upgrade setuptools
     pip install --upgrade distribute
@@ -41,6 +41,11 @@ app specific files that don't matter to version control.
 
     git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
     vim +BundleInstall +qall
+
+    cd ~/.vim/bundle/YouCompleteMe && ./install.sh --clang-completer
+    cd ~/.vim/bundle/tern_for_vim && npm install
+
+    cd ~
 
     brew linkapps
 
