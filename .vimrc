@@ -25,7 +25,7 @@ Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'wavded/vim-stylus'
 
 " JavaScript highlighting and indentation
-Bundle 'eddiemonge/vim-javascript'
+Bundle 'pangloss/vim-javascript'
 
 " Add CoffeeScript support
 Bundle 'kchmck/vim-coffee-script'
@@ -286,7 +286,7 @@ fu! AUTOCOMPLETES()
   inoremap [[ [
   inoremap [] []
   inoremap ' ''<Left>
-  inoremap '' ''
+  inoremap '' '
   inoremap " ""<Left>
   inoremap "" ""
   inoremap func<Tab> function<Space>(<Space><Space>) {<Enter>}<Esc>?<Space>)<Enter>i
