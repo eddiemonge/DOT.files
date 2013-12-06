@@ -15,8 +15,16 @@ plugins=(git svn svn-n)
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-export RBENV_ROOT=/usr/local/var/rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if `which rbenv` > /dev/null 2>&1; then
+  export RBENV_ROOT=/usr/local/var/rbenv
+  eval "$(rbenv init -)"
+else
+  # Brew ruby
+  export PATH=/usr/local/opt/ruby/bin:$PATH
+  # You may want to add this to your PATH. After upgrades, you can run
+  #   gem pristine --all --only-executables
+fi
+
 
 source $ZSH/oh-my-zsh.sh
 
