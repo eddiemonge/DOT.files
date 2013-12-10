@@ -97,7 +97,7 @@ Bundle 'editorconfig/editorconfig-vim'
 Bundle 'tpope/vim-fugitive'
 
 " Autocompletions
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
 Bundle 'marijnh/tern_for_vim'
 
 
