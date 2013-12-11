@@ -1,13 +1,14 @@
 # Dir navigation
 alias ll="ls -alh"
 function cdl { cd $1; ll;}
-unalias md
+# unalias md
 function md { mkdir -p $1; cd $_ }
 alias web="cd /Users/`whoami`/Sites"
 alias npmlib="cd /usr/local/share/npm/lib/node_modules && ll"
 
 
 # Utilities
+alias be="bundle exec"
 alias g="git"
 alias gs="/usr/bin/git svn"
 alias grma="git ls-files --deleted -z | xargs -0 git rm"
