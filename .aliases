@@ -35,6 +35,7 @@ alias whois="whois -h whois-servers.net"
 
 # Recursively delete `.DS_Store` files
 alias removeds="find . -name '*.DS_Store' -type f -ls -delete"
+alias refreshtest="cd ~/Desktop; rm -rf test; md test;"
 
 
 
