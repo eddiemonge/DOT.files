@@ -20,7 +20,7 @@ app specific files that don't matter to version control.
 
     chsh -s $(which zsh)
 
-    brew install python wget ack node cmake rbenv trash
+    brew install python wget ack node cmake rbenv trash ruby-build
 
     pip install --upgrade setuptools
     pip install --upgrade distribute
