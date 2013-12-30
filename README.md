@@ -12,7 +12,7 @@ app specific files that don't matter to version control.
     mv ~/DOTS/* ~/
     cd ~
 
-    ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+    ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
 
     brew install zsh
 
