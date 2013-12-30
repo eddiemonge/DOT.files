@@ -30,8 +30,12 @@ app specific files that don't matter to version control.
 
     pip install pygments
 
-    wget http://www.levien.com/type/myfonts/Inconsolata.otf && open Inconsolata.otf && rm Inconsolata.otf
-    wget https://github.com/Lokaltog/powerline-fonts/raw/master/Inconsolata/Inconsolata%20for%20Powerline.otf && open Inconsolata\ for\ Powerline.otf && rm Inconsolata\ for\ Powerline.otf
+    cd ~/Desktop
+    wget http://www.levien.com/type/myfonts/Inconsolata.otf && open Inconsolata.otf
+    wget https://github.com/Lokaltog/powerline-fonts/raw/master/Inconsolata/Inconsolata%20for%20Powerline.otf && open Inconsolata\ for\ Powerline.otf
+    wget https://gist.github.com/eddiemonge/8185698/raw/51bdd743cc1cc551c49457fe1503061b9404183f/Inconsolata-dz-Powerline.otf && open Inconsolata-dz-Powerline.otf
+    
+    rm Inconsolata.otf Inconsolata\ for\ Powerline.otf Inconsolata-dz-Powerline.otf
 
     pip install --user git+git://github.com/Lokaltog/powerline
 
