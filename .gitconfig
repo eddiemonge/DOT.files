@@ -6,6 +6,7 @@
   pb = publish-branch
   st = status
   ms = merge --squash
+  pr = pull --rebase
 [color]
   ui = auto
 [color "branch"]
