@@ -33,6 +33,7 @@
 .npm
 .npmrc
 .pearrc
+.pip
 .post-review-cookies.txt
 .putty
 .reviewboardrc
@@ -61,6 +62,7 @@ Development
 Documents
 Downloads
 Dropbox
+Google Drive
 Library
 Movies
 Music
