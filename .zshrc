@@ -10,17 +10,18 @@ ZSH_CUSTOM=$HOME/.ohmyzsh-mine
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git svn svn-n)
+plugins=(git svn svn-n rbenv)
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-if `which rbenv` > /dev/null 2>&1; then
+if /usr/local/bin/rbenv --version > /dev/null; then
   export RBENV_ROOT=/usr/local/var/rbenv
-  eval "$(rbenv init -)"
+  eval "$(/usr/local/bin/rbenv init -)"
 else
   # Brew ruby
   export PATH=/usr/local/opt/ruby/bin:$PATH
+  echo "Using System Ruby"
   # You may want to add this to your PATH. After upgrades, you can run
   #   gem pristine --all --only-executables
 fi
