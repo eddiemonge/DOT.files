@@ -7,12 +7,7 @@ unset file
 # Local bins
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
-export PATH=/usr/local/git/bin:$PATH
-export PATH=/usr/local/git/bin/git:$PATH
-export PATH=/opt/subversion/bin:$PATH
-export PATH=/usr/local/mysql/bin:$PATH
 export PATH=/Applications/Android/platform-tools:$PATH
-
 export PHANTOMJS_BIN=$(which phantomjs)
 
 # Set vim as default editor

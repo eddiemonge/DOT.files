@@ -27,10 +27,11 @@ if ! `which brew` > /dev/null; then
 fi
 
 # Install ZSH and other stuff
-brew install zsh python wget ack node trash chruby ruby-build phantomjs
+brew install zsh
 echo "ZSH it up"
 which zsh | sudo tee -a /etc/shells
 chsh -s $(which zsh)
+brew install python wget ack node trash phantomjs svn git mysql
 
 # Customize and update npm
 echo "Node, Node, Node"

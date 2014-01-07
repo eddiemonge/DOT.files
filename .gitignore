@@ -28,6 +28,7 @@
 .lesshst
 .MacOSX
 .Makemkv
+.mysql_history
 .node-gyp
 .node_modules
 .npm
