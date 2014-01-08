@@ -15,19 +15,6 @@ plugins=(git svn svn-n)
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-# if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-# if /usr/local/bin/rbenv --version > /dev/null; then
-#   export RBENV_ROOT=/usr/local/var/rbenv
-#   eval "$(/usr/local/bin/rbenv init -)"
-# else
-#   # Brew ruby
-#   export PATH=/usr/local/opt/ruby/bin:$PATH
-#   echo "Using System Ruby"
-#   # You may want to add this to your PATH. After upgrades, you can run
-#   #   gem pristine --all --only-executables
-# fi
-
-
 source $ZSH/oh-my-zsh.sh
 
 # Make commands come after a new line to distinguish output
@@ -43,6 +30,5 @@ preexec () {
 # Customize to your needs...
 source $HOME/.profile
 
-# source /usr/local/opt/chruby/share/chruby/chruby.sh
-# source /usr/local/opt/chruby/share/chruby/auto.sh
-# chruby ruby-2.1.0
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

@@ -8,6 +8,7 @@ unset file
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/Applications/Android/platform-tools:$PATH
+export PATH=$HOME/.rvm/bin:$PATH
 export PHANTOMJS_BIN=$(which phantomjs)
 
 # Set vim as default editor
