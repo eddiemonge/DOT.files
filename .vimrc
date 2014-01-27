@@ -266,7 +266,7 @@ iab Becuase   Because
 
 
 " Code helpers
-autocmd FileType javascript,css,sass call AUTOCOMPLETES()
+autocmd FileType javascript,css,sass,html,jade,json,stylus,styl call AUTOCOMPLETES()
 fu! AUTOCOMPLETES()
   inoremap < <><Left>
   inoremap </ </><Left>

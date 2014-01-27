@@ -10,6 +10,7 @@ export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/Applications/Android/platform-tools:$PATH
 export PATH=$HOME/.rvm/bin:$PATH
 export PHANTOMJS_BIN=$(which phantomjs)
+export NODE_PATH=$(npm get prefix)/lib/node_modules
 
 # Set vim as default editor
 export SVN_EDITOR=vim
