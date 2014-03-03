@@ -2,9 +2,11 @@
 .aliases_custom
 .adobe
 .android
+.anyconnect
 .aspera
+.atom
 .bash_history
-.profile_custom
+.berkshelf
 .bower
 .cache
 .CFUserTextEncoding
@@ -36,6 +38,7 @@
 .pearrc
 .pip
 .post-review-cookies.txt
+.profile_custom
 .putty
 .reviewboardrc
 .rnd
@@ -50,6 +53,7 @@
 .Trash
 .Trashes
 .titanium
+.vagrant.d
 .vim
 .viminfo
 .vim_session
