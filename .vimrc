@@ -247,8 +247,9 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_user_command = "find %s -type f | egrep -v '/\.(git|hg|svn|sass-cache|bundle|DS_Store|tmp)|node_module|vendor|bower_components|solr|tmp/' | egrep -v '\.(png|exe|jpg|gif|svg)$'"
 
-" Ignore version control files for CtrlP
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/tmp/*,*.so,*.swp,*.zip
+" Ignore files for CtrlP
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/tmp/*,*/.tmp/*,*.so,*.swp,*.zip,*/node_modules/*
+let g:ack_wildignore = 0
 let g:ctrlp_custom_ignore = '\v.DS_Store|.sass-cache|.bundle|.git|.hg|.svn|node_modules|vendor|bower_components$'
 
 
