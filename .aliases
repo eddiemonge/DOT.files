@@ -18,6 +18,7 @@ alias g="git"
 alias gs="/usr/bin/git svn"
 alias grma="git ls-files --deleted -z | xargs -0 git rm"
 alias fixowmenu="/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo 'Open With has been rebuilt, Finder will relaunch'"
+alias updatedb="sudo /usr/libexec/locate.updatedb"
 alias vim="mvim"
 alias vdiff="mvim -d"
 alias vimdiff="mvim -d"
@@ -76,4 +77,3 @@ function gz() {
   echo "gzipped size (bytes): "
   gzip -c "$1" | wc -c
 }
-
