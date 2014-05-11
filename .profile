@@ -6,7 +6,7 @@ unset file
 # Path Stuff
 # Local bins
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-export PATH=/usr/local/share/npm/bin:$PATH
+export PATH=$(npm get prefix)/bin:$PATH
 export PATH=/Applications/Android/platform-tools:$PATH
 export PATH=$HOME/.rvm/bin:$PATH
 export PHANTOMJS_BIN=$(which phantomjs)
