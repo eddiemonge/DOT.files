@@ -11,6 +11,7 @@ export PATH=/Applications/Android/platform-tools:$PATH
 export PATH=$HOME/.rvm/bin:$PATH
 export PHANTOMJS_BIN=$(which phantomjs)
 export NODE_PATH=$(npm get prefix)/lib/node_modules
+export VAGRANT_VMWARE_CLONE_DIRECTORY="~/Documents/Virtual Machines"
 
 # Set vim as default editor
 export SVN_EDITOR=vim
