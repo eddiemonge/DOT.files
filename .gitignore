@@ -25,6 +25,7 @@
 .gdb_history
 .gem
 .gitk
+.gnupg
 .heroku
 .irb-history
 .lesshst
@@ -38,6 +39,7 @@
 .pearrc
 .pip
 .post-review-cookies.txt
+.private_key.gpg
 .profile_custom
 .putty
 .reviewboardrc
