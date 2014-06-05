@@ -40,6 +40,7 @@
 [user]
   name = Eddie Monge
   email = eddie@eddiemonge.com
+  signingkey = 00CFD54E
 [credential]
   helper = osxkeychain
 [reviewboard]
@@ -48,3 +49,5 @@
   default = matching
 ; [remote "upstream"]
 ;   fetch = +refs/pull/*/head:refs/remotes/upstream/pr/*
+[commit]
+  gpgsign = true
