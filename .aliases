@@ -9,7 +9,7 @@ if type md | grep -q 'function' 2>/dev/null; then
 fi
 function md { mkdir -p $1 && cd $_ }
 alias web="cd /Users/`whoami`/Sites"
-alias npmlib="cd /usr/local/share/npm/lib/node_modules && ll"
+alias npmlib="cd $(npm config get prefix)/lib/node_modules && ll"
 
 
 # Utilities
