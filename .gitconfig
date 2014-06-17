@@ -49,5 +49,5 @@
   default = matching
 ; [remote "upstream"]
 ;   fetch = +refs/pull/*/head:refs/remotes/upstream/pr/*
-[commit]
-  gpgsign = true
+; [commit]
+;   gpgsign = true
