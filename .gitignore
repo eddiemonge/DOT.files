@@ -26,6 +26,7 @@
 .gem
 .gitk
 .gnupg
+.gradle
 .heroku
 .irb-history
 .lesshst
@@ -63,6 +64,7 @@
 .zcompdump*
 .zsh-update
 .zsh_history
+AndroidStudioProjects
 Applications
 Books
 Desktop

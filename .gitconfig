@@ -35,7 +35,7 @@
 [url "git://github.com/"]
   insteadOf = "github:"
 [core]
-  editor = mvim -f
+  editor = atom --wait
   excludesfile = ~/.gitignore_global
 [user]
   name = Eddie Monge

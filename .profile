@@ -4,6 +4,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 # export PATH=/usr/local/share/npm/bin:$PATH
 # export PATH=$(npm get prefix)/bin:$PATH
 export PATH=/Applications/Android/platform-tools:$PATH
+export PATH=/Applications/Android\ Studio.app/sdk/platform-tools:$PATH
 export PATH=$HOME/.rvm/bin:$PATH
 export PHANTOMJS_BIN=$(which phantomjs)
 export NODE_PATH=$(npm get prefix)/lib/node_modules
