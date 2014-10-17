@@ -64,6 +64,7 @@
 .zcompdump*
 .zsh-update
 .zsh_history
+npm-debug.log
 AndroidStudioProjects
 Applications
 Books
