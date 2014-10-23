@@ -32,7 +32,6 @@ source $HOME/.profile
 
 # Load RVM into a shell session *as a function*
 if which rvm > /dev/null; then
-  [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 fi
 ###-begin-npm-completion-###
 #
@@ -87,3 +86,5 @@ elif type compctl &>/dev/null; then
   compctl -K _npm_completion npm
 fi
 ###-end-npm-completion-###
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

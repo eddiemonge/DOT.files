@@ -30,6 +30,7 @@
 .heroku
 .irb-history
 .lesshst
+.local
 .MacOSX
 .Makemkv
 .mysql_history
@@ -47,6 +48,7 @@
 .rnd
 .rubies
 .rvm
+.rvmrc
 .secrets
 .ssh
 .ssl
