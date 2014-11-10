@@ -35,7 +35,7 @@
 [url "git://github.com/"]
   insteadOf = "github:"
 [core]
-  editor = atom --wait
+  editor = mvim -f --nomru -c \"au VimLeave * !open -a iTerm2\"
   excludesfile = ~/.gitignore_global
 [user]
   name = Eddie Monge
