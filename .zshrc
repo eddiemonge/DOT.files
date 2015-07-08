@@ -29,6 +29,7 @@ preexec () {
 
 # Customize to your needs...
 source $HOME/.profile
+source $HOME/.profile_custom
 
 # Load RVM into a shell session *as a function*
 if which rvm > /dev/null; then
