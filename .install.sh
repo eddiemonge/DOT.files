@@ -23,7 +23,7 @@ echo "Hello OSX"
 # Install brew if it isn't already
 if ! `which brew` > /dev/null; then
   echo "Brew me"
-  ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 # Install ZSH and other stuff
