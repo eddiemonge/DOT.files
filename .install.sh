@@ -62,7 +62,7 @@ brew linkapps
 git clone https://github.com/eddiemonge/TigerStripe.git ~/.vim/colors/TigerStripe
 mv ~/.vim/colors/TigerStripe/colors/TigerStripe.vim ~/.vim/colors/TigerStripe.vim
 rm -rf ~/.vim/colors/TigerStripe
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-vim +BundleInstall +qall
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 cd ~/.vim/bundle/YouCompleteMe && ./install.sh --clang-completer
 cd ~/.vim/bundle/tern_for_vim && npm install

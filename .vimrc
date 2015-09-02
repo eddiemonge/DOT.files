@@ -4,10 +4,11 @@ set nocompatible
 
 " Vundle
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
 " let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " My Bundles
 " JSHint integration.
@@ -15,37 +16,37 @@ Bundle 'gmarik/vundle'
 " :JSHintReload reload all .jshintrc option files.
 " :JSHintToggle enable or disable jshint validation
 " Add options to ~/.jshintrc
-Bundle 'wookiehangover/jshint.vim'
+Plugin 'wookiehangover/jshint.vim'
 
 " Adds a file browser to the sidebar
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 
 " CSS helpers
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'wavded/vim-stylus'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'wavded/vim-stylus'
 
 " JavaScript highlighting and indentation
-Bundle 'pangloss/vim-javascript'
+Plugin 'pangloss/vim-javascript'
 
 " Add CoffeeScript support
-Bundle 'kchmck/vim-coffee-script'
+Plugin 'kchmck/vim-coffee-script'
 
 " Add Jade support
-Bundle 'digitaltoad/vim-jade'
+Plugin 'digitaltoad/vim-jade'
 
 " JSON highlighting
-Bundle 'elzr/vim-json'
+Plugin 'elzr/vim-json'
 
 " Line number toggling
-Bundle 'jeffkreeftmeijer/vim-numbertoggle'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 
 " Easily find strings or replace in files
 " ,vv to fond the current word
 " ,vr search for the word and prompt for replacement
-Bundle 'vim-scripts/EasyGrep'
+Plugin 'vim-scripts/EasyGrep'
 
 " Testing line hints
-Bundle 'tomtom/quickfixsigns_vim'
+Plugin 'tomtom/quickfixsigns_vim'
 
 " Change the surrounding elements
 " cs'' to change quotes inside
@@ -55,23 +56,23 @@ Bundle 'tomtom/quickfixsigns_vim'
 " ysiw' surround a word
 " yss' surround line
 " VS<p> adding surround with visual editor
-Bundle 'tpope/vim-surround'
+Plugin 'tpope/vim-surround'
 " Be able to repeat the previous block of plugins
-Bundle 'tpope/vim-repeat'
+Plugin 'tpope/vim-repeat'
 
 " Powerline status bar
-Bundle 'Lokaltog/powerline'
+Plugin 'Lokaltog/powerline'
 
 " Shows the number of matches in a search
-Bundle 'henrik/vim-indexed-search'
+Plugin 'henrik/vim-indexed-search'
 
 " Quickly open any file
 " See https:"github.com/kien/ctrlp.vim for documentation
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 
 " Easily jump to location.
 " ,,f{query} for searches
-Bundle 'Lokaltog/vim-easymotion'
+Plugin 'Lokaltog/vim-easymotion'
 
 " ACK for searching
 " :Ack [options] {pattern} [{directory}]
@@ -83,23 +84,26 @@ Bundle 'Lokaltog/vim-easymotion'
 " v    to open in vertical split
 " gv   to open in vertical split silently
 " q    to close the quickfix window
-Bundle 'mileszs/ack.vim'
+Plugin 'mileszs/ack.vim'
 
 " Toggle comments on lines
 " gc(motion) Toggle comments
-Bundle 'tpope/vim-commentary'
+Plugin 'tpope/vim-commentary'
 
 " Allow editorconfig files
-Bundle 'editorconfig/editorconfig-vim'
+Plugin 'editorconfig/editorconfig-vim'
 
 
 " Work with Git
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 
 " Autocompletions
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'marijnh/tern_for_vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'marijnh/tern_for_vim'
 
+call vundle#end()
+
+filetype plugin indent on
 
 syntax on " Turn on that syntax highlighting
 
@@ -292,6 +296,3 @@ fu! AUTOCOMPLETES()
   inoremap "" ""
   inoremap func<Tab> function<Space>(<Space><Space>) {<Enter>}<Esc>?<Space>)<Enter>i
 endfu
-
-
-filetype plugin indent on
