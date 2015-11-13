@@ -69,6 +69,7 @@
 .zcompdump*
 .zsh-update
 .zsh_history
+.zshrc_custom
 npm-debug.log
 AndroidStudioProjects
 Applications
