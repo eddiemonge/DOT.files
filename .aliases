@@ -13,7 +13,6 @@ alias npmlib="cd $(npm config get prefix)/lib/node_modules && ll"
 
 
 # Utilities
-alias be="bundle exec"
 alias g="git"
 alias gs="/usr/bin/git svn"
 alias grma="git ls-files --deleted -z | xargs -0 git rm"
@@ -45,9 +44,6 @@ alias refreshtest="cd ~/Desktop; rm -rf test; md test;"
 alias edithosts="sudo mvim /etc/hosts"
 alias editvhosts="vim /etc/apache2/extra/httpd-vhosts.conf"
 alias gitsync="git pull upstream master && git push origin master"
-
-
-alias ctagruby="ctags -R --languages=ruby --exclude=.svn"
 
 
 # Start an HTTP server from a directory, optionally specifying the port
