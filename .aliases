@@ -18,11 +18,11 @@ alias gs="/usr/bin/git svn"
 alias grma="git ls-files --deleted -z | xargs -0 git rm"
 alias fixowmenu="/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo 'Open With has been rebuilt, Finder will relaunch'"
 alias updatedb="sudo /usr/libexec/locate.updatedb"
+alias v="mvim"
 alias vim="mvim"
 alias vdiff="mvim -d"
 alias vimdiff="mvim -d"
-alias v="mvim"
-alias vinstall="vim +BundleInstall +qall"
+alias vinstall="vim +PluginInstall +qall"
 alias zshreload="source ~/.zshrc"
 alias zshconfig="v ~/.zshrc"
 
@@ -36,8 +36,10 @@ alias whois="whois -h whois-servers.net"
 
 # Recursively delete `.DS_Store` files
 alias removeds="find . -name '*.DS_Store' -type f -ls -delete"
-alias refreshtest="cd ~/Desktop; rm -rf test; md test;"
 
+
+# Create a tmp working directory that is easy to get to
+alias refreshtest="cd ~/Desktop; trash test; md test;"
 
 
 # Development stuff
@@ -55,6 +57,9 @@ function server() {
   python -c $'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();' "$port"
 }
 
+
+# Takes a top level directory and goes into each child running git rebase pull.
+# I use it to update all my OSS projects at once
 function gupfolder() {
   find . -type d -depth 1 -exec echo {} \; -exec git --git-dir={}/.git --work-tree=$(pwd)/{} pull --rebase upstream master \; -exec echo "done" \;
 }
