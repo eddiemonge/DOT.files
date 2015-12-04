@@ -39,6 +39,7 @@
 .mysql_history
 .node-gyp
 .node_modules
+.node_repl_history
 .npm
 .npmrc
 .pearrc
