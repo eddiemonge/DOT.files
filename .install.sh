@@ -31,7 +31,7 @@ brew install zsh
 echo "ZSH it up"
 which zsh | sudo tee -a /etc/shells
 chsh -s $(which zsh)
-brew install python wget ack node trash phantomjs svn git mysql
+brew install python wget ack node trash phantomjs git
 
 # Customize and update npm
 echo "Node, Node, Node"
