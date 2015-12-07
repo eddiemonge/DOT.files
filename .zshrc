@@ -12,11 +12,6 @@ ZSH_CUSTOM=$HOME/.ohmyzsh-mine
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
-
-source $ZSH/oh-my-zsh.sh
-
 # Make commands come after a new line to distinguish output
 PS1="
 $PS1
@@ -27,10 +22,10 @@ preexec () {
   printf '%*s\n' $(($COLUMNS-1)) '' | tr ' ' -
 }
 
-# Customize to your needs...
-source $HOME/.profile_custom
-source $HOME/.profile
-source $HOME/.zshrc_custom
+# Loads zsh config, custom profile, normal profile and custom zshrc files
+for file in $HOME/.{oh-my-zsh/oh-my-zsh.sh,profile_custom,profile,zshrc_custom}; do
+  [ -r "$file" ] && source "$file"
+done
 
 ###-begin-npm-completion-###
 #
