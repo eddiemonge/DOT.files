@@ -120,7 +120,7 @@ set ignorecase " Ignore case in search patterns
 set incsearch " While typing a searc:h command, show where the pattern, as it was typed
 set laststatus=2 " Always display the statusline in all windows
 set list " Show the characters defined in listchars
-set listchars=tab:»·,trail:·,extends:▶,precedes:◀,conceal:▓,nbsp:␣
+set listchars=tab:▸·,trail:·,extends:»,precedes:«,conceal:▓,nbsp:␣
 " Highlight unwanted spaces
 highlight SpecialKey ctermbg=red guibg=red guifg=yellow
 set nobackup " Turn off swap file
