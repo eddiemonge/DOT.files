@@ -43,8 +43,6 @@
   signingkey = 00CFD54E
 [credential]
   helper = osxkeychain
-[reviewboard]
-  url = https://codereview.asperasoft.com
 [push]
   default = matching
 ; [remote "upstream"]
