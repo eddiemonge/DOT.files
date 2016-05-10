@@ -33,6 +33,7 @@ for file in $HOME/.{profile_custom,profile,zshrc_custom}; do
   [ -r "$file" ] && source "$file"
 done
 
+alias npm='noglob npm'
 ###-begin-npm-completion-###
 #
 # npm command completion script
