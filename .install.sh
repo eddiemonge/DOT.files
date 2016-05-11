@@ -15,6 +15,7 @@ git clone --recursive https://github.com/eddiemonge/DOT.files.git ~/DOTS
 # Move twice to move the .files and the files
 mv DOTS/{.,}* ./
 rm -rf DOTS
+# Will need to update the location of the submodule in .git/module/.oh-my-zsh/config
 
 # Run the OSX customizations
 echo "Hello OSX"
@@ -31,20 +32,19 @@ brew install zsh
 echo "ZSH it up"
 which zsh | sudo tee -a /etc/shells
 chsh -s $(which zsh)
-brew install python wget ack node trash phantomjs git
+brew install python wget ack node trash phantomjs git nvm cmake
 
 # Customize and update npm
 echo "Node, Node, Node"
-npm set prefix /usr/local/share/npm/
-npm install -g npm
+nvm install latest
+nvm alias default node
+# npm set prefix /usr/local/share/npm/
+npm install -g npm typescript yo
 
 # Doing some python stuff
 echo "Ugh Python. Whhhhhyyyy?"
-pip install --upgrade setuptools
-pip install --upgrade distribute
-pip install --upgrade pip
-pip install pygments
-pip install git+git://github.com/Lokaltog/powerline
+pip install --upgrade setuptools distribute pip
+pip install pygments git+git://github.com/Lokaltog/powerline
 
 # Install custom fonts
 echo "Font you"
@@ -64,5 +64,5 @@ mv ~/.vim/colors/TigerStripe/colors/TigerStripe.vim ~/.vim/colors/TigerStripe.vi
 rm -rf ~/.vim/colors/TigerStripe
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
-cd ~/.vim/bundle/YouCompleteMe && ./install.sh --clang-completer
+cd ~/.vim/bundle/YouCompleteMe && ./install.py --clang-completer --tern-completer
 cd ~/.vim/bundle/tern_for_vim && npm install
