@@ -65,6 +65,7 @@
 .Trash
 .Trashes
 .titanium
+.v8flags*
 .vagrant.d
 .vim
 .viminfo
