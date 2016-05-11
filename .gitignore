@@ -12,6 +12,7 @@
 .bower
 .cache
 .CFUserTextEncoding
+.cisco
 .composer
 .config
 .ctrlp_cache
@@ -42,6 +43,7 @@
 .node_repl_history
 .npm
 .npmrc
+.nvm
 .pearrc
 .pip
 .post-review-cookies.txt
