@@ -11,12 +11,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " My Bundles
-" JSHint integration.
-" Manually call with :JSHint
-" :JSHintReload reload all .jshintrc option files.
-" :JSHintToggle enable or disable jshint validation
-" Add options to ~/.jshintrc
-Plugin 'wookiehangover/jshint.vim'
 
 " Adds a file browser to the sidebar
 Plugin 'scrooloose/nerdtree'
@@ -226,10 +220,6 @@ map <F3> :source ~/.vim_session <cr>     " And load session with F3
 
 " Map the leader character to the comma key
 let mapleader = ","
-
-
-" Syntax checker
-let g:syntastic_javascript_checkers = ["jshint"]
 
 
 " JavaScript Code Folding
