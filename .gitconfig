@@ -39,13 +39,13 @@
   excludesfile = ~/.gitignore_global
 [user]
   name = Eddie Monge
-  email = eddie@eddiemonge.com
-  signingkey = 00CFD54E
+; email = emailaddresshere
+; signingkey = keysignaturehere
 [credential]
   helper = osxkeychain
 [push]
   default = matching
 ; [remote "upstream"]
 ;   fetch = +refs/pull/*/head:refs/remotes/upstream/pr/*
-; [commit]
-;   gpgsign = true
+[commit]
+  gpgsign = true
