@@ -93,7 +93,6 @@ Plugin 'tpope/vim-fugitive'
 
 " Autocompletions
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'marijnh/tern_for_vim'
 
 call vundle#end()
 
