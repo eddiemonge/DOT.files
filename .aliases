@@ -8,14 +8,11 @@ if type md | grep -q 'function' 2>/dev/null; then
   unfunction md
 fi
 function md { mkdir -p $1 && cd $_ }
-alias web="cd /Users/`whoami`/Sites"
 alias npmlib="cd $(npm config get prefix)/lib/node_modules && ll"
 
 
 # Utilities
 alias g="git"
-alias gs="/usr/bin/git svn"
-alias grma="git ls-files --deleted -z | xargs -0 git rm"
 alias fixowmenu="/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo 'Open With has been rebuilt, Finder will relaunch'"
 alias updatedb="sudo /usr/libexec/locate.updatedb"
 alias v="mvim"
@@ -44,8 +41,6 @@ alias refreshtest="cd ~/Desktop; trash test; md test;"
 
 # Development stuff
 alias edithosts="sudo mvim /etc/hosts"
-alias editvhosts="vim /etc/apache2/extra/httpd-vhosts.conf"
-alias gitsync="git pull upstream master && git push origin master"
 
 
 # Start an HTTP server from a directory, optionally specifying the port
