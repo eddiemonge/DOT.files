@@ -20,7 +20,7 @@ PS1="
 $PS1
 "
 
-# Add a separate after the command to make it easier to distinguish output
+# Add a separator after the command to make it easier to distinguish output
 preexec () {
   printf '%*s\n' $(($COLUMNS-1)) '' | tr ' ' -
 }
