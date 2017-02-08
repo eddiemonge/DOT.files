@@ -64,5 +64,3 @@ mv ~/.vim/colors/TigerStripe/colors/TigerStripe.vim ~/.vim/colors/TigerStripe.vi
 rm -rf ~/.vim/colors/TigerStripe
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
-cd ~/.vim/bundle/YouCompleteMe && ./install.py --clang-completer --tern-completer
-cd ~/.vim/bundle/tern_for_vim && npm install

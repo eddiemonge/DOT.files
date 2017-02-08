@@ -22,12 +22,6 @@ Plugin 'wavded/vim-stylus'
 " JavaScript highlighting and indentation
 Plugin 'pangloss/vim-javascript'
 
-" Add CoffeeScript support
-Plugin 'kchmck/vim-coffee-script'
-
-" Add Jade support
-Plugin 'digitaltoad/vim-jade'
-
 " JSON highlighting
 Plugin 'elzr/vim-json'
 
@@ -90,9 +84,6 @@ Plugin 'editorconfig/editorconfig-vim'
 
 " Work with Git
 Plugin 'tpope/vim-fugitive'
-
-" Autocompletions
-Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 
