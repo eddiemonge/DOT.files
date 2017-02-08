@@ -6,7 +6,6 @@ export PHANTOMJS_BIN=$(which phantomjs)
 export NODE_PATH=$(npm get prefix)/lib/node_modules
 
 # Set vim as default editor
-export SVN_EDITOR=vim
 export EDITOR=vim
 
 export LC_ALL=en_US.UTF-8
