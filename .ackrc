@@ -1,7 +1,7 @@
 --type-set=DUMB=.log,.tmp
 --noDUMB
---ignore-dir=node_modules
 --ignore-dir=bower_components
+--ignore-dir=node_modules
 --ignore-dir=vendor
 --ignore-dir=.tmp
 --ignore-dir=dist

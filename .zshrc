@@ -32,3 +32,9 @@ source $ZSH/oh-my-zsh.sh
 for file in $HOME/.{zshrc_custom,profile_custom,profile}; do
   [ -r "$file" ] && source "$file"
 done
+#
+# Load aliases and things after path
+for file in $HOME/.{secrets,aliases,aliases_custom,functions}; do
+  [ -r "$file" ] && source "$file"
+done
+unset file
