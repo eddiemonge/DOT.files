@@ -32,14 +32,14 @@ brew install zsh
 echo "ZSH it up"
 which zsh | sudo tee -a /etc/shells
 chsh -s $(which zsh)
-brew install python wget ack trash phantomjs git nvm cmake
+brew install python wget ack trash git nvm
 
 # Customize and update npm
 echo "Node, Node, Node"
 nvm install latest
 nvm alias default node
 # npm set prefix /usr/local/share/npm/
-npm install -g npm yo
+npm install -g npm
 
 # Doing some python stuff
 echo "Ugh Python. Whhhhhyyyy?"
