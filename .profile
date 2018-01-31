@@ -1,4 +1,8 @@
 # Path Stuff
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 # Local bins
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 # export PATH=$(npm get prefix)/bin:$PATH

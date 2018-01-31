@@ -66,6 +66,9 @@ preexec () {
   printf '%*s\n' $(($COLUMNS-1)) '' | tr ' ' -
 }
 
+# Lazy load nvm
+export NVM_LAZY_LOAD=true
+
 # Loads zsh config
 source $ZSH/oh-my-zsh.sh
 
