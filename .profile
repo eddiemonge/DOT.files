@@ -1,9 +1,10 @@
 # Path Stuff
 # Local bins
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-export PATH=$(npm get prefix)/bin:$PATH
-export PHANTOMJS_BIN=$(which phantomjs)
-export NODE_PATH=$(npm get prefix)/lib/node_modules
+# export PATH=$(npm get prefix)/bin:$PATH
+# export NODE_PATH=$(npm get prefix)/lib/node_modules
+
+export GPG_TTY=$(tty)
 
 # Set vim as default editor
 if [[ -n $SSH_CONNECTION ]]; then
