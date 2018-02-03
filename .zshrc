@@ -81,4 +81,4 @@ done
 for file in $HOME/.{secrets,aliases,aliases_custom,functions}; do
   [ -r "$file" ] && source "$file"
 done
-# unset file
+unset file
