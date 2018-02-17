@@ -10,6 +10,7 @@
 .config
 .docker
 .dropbox*
+.expo
 .gnupg
 .iterm
 .MacOSX
