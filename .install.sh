@@ -43,8 +43,8 @@ npm install -g npm
 
 # Doing some python stuff
 echo "Ugh Python. Whhhhhyyyy?"
-pip2 install --upgrade setuptools distribute pip
-pip2 install pygments git+git://github.com/Lokaltog/powerline
+pip3 install --upgrade pip setuptools wheel
+pip3 install pygments git+git://github.com/Lokaltog/powerline
 
 # Install custom fonts
 echo "Font you"
