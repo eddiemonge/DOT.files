@@ -31,6 +31,9 @@ alias zshconfig="v ~/.zshrc"
 ## File previews
 alias c="bat"
 
+## Docker
+alias dco="docker-compose"
+
 ## Better ping
 alias ping='prettyping --nolegend'
 
