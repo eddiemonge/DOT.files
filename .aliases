@@ -1,3 +1,6 @@
+# Only use these if in an interactive prompt
+case "$-" in *i*) ;; *) return ;; esac
+
 # Dir navigation
 alias ll="ls -alh"
 function cdl { cd $1; ll;}
