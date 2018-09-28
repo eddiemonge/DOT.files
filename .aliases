@@ -4,10 +4,10 @@ case "$-" in *i*) ;; *) return ;; esac
 # Dir navigation
 alias ll="ls -alh"
 function cd { builtin cd "$@" && ls; }
-if type md | grep -q 'alias' 2>/dev/null; then
+if type md | grep -q "alias" 2>/dev/null; then
   unalias md
 fi
-if type md | grep -q 'function' 2>/dev/null; then
+if type md | grep -q "function" 2>/dev/null; then
   unfunction md
 fi
 function md { mkdir -p $1 && cd $_ }
