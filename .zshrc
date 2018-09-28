@@ -59,7 +59,6 @@ ZSH_CUSTOM=$HOME/.oh-my-zsh_custom
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  zsh-nvm
 )
 
 # Make commands come after a new line to distinguish output
