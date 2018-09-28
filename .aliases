@@ -3,7 +3,7 @@ case "$-" in *i*) ;; *) return ;; esac
 
 # Dir navigation
 alias ll="ls -alh"
-function cdl { cd $1; ll;}
+function cd { builtin cd "$@" && ls; }
 if type md | grep -q 'alias' 2>/dev/null; then
   unalias md
 fi
