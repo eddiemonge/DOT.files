@@ -6,8 +6,6 @@ export NVM_DIR="$HOME/.nvm"
 # Local bins
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=/usr/local/opt/python/libexec/bin:$PATH
-# export PATH=$(npm get prefix)/bin:$PATH
-# export NODE_PATH=$(npm get prefix)/lib/node_modules
 
 export GPG_TTY=$(tty)
 
