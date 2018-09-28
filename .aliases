@@ -26,10 +26,16 @@ alias vinstall="vim +PluginInstall +qall"
 alias zshreload="source ~/.zshrc"
 alias zshconfig="v ~/.zshrc"
 
+## File previews
+alias c="bat"
 
-# `cat` with beautiful colors. requires Pygments installed.
-# sudo easy_install Pygments
-alias c='pygmentize -O style=monokai -f console256 -g'
+## Better ping
+alias ping='prettyping --nolegend'
+
+## fzf (replacement for Ctrl+R
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+# add support for ctrl+o to open selected file in VS Code
+export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 
 # Enhanced WHOIS lookups
 alias whois="whois -h whois-servers.net"
