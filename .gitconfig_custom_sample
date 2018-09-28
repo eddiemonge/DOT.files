@@ -1,0 +1,7 @@
+[user]
+  name = My Name
+  email = my@email.address
+[credential]
+  helper = osxkeychain
+[commit]
+  gpgsign = true

@@ -42,18 +42,14 @@
 [core]
   editor = mvim -f --nomru -c \"au VimLeave * !open -a iTerm2\"
   excludesfile = ~/.gitignore_global
-[include]
-  path = ./.gitconfig_custom
-[credential]
-  helper = osxkeychain
 [push]
   default = current
 ; [remote "upstream"]
 ;   fetch = +refs/pull/*/head:refs/remotes/upstream/pr/*
-[commit]
-  gpgsign = true
 [rebase]
 	autosquash = true
 [pager]
 	branch = false
 	tag = false
+[include]
+  path = ./.gitconfig_custom
