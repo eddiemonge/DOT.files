@@ -1,11 +1,23 @@
 #!/bin/bash
 
+# TODO add command line install for:
+# Chrome
+# Docker
+# iTerm
+# VSCode
+
 # Make sure we start in the home directory and get the password prompt out of the way
 echo "User password is needed later on"
 sudo cd ~
 
 # Xcode is needed later
 open -a App\ Store
+# Manuall install:
+# Slack
+# Divvy
+# Alfred 3
+# Skitch
+# Navicat
 xcode-select --install
 
 # Get the dot.files
@@ -13,13 +25,16 @@ echo "Do the dots dance"
 rm -rf DOTS
 git clone --recursive https://github.com/eddiemonge/DOT.files.git ~/DOTS
 # Move twice to move the .files and the files
-mv DOTS/{.,}* ./
+mv DOTS/.* ./
+mv DOTS/* ./
 rm -rf DOTS
 # Will need to update the location of the submodule in .git/module/.oh-my-zsh/config
+# TODO Not sure what the above comment is for
 
 # Run the OSX customizations
-echo "Hello OSX"
-./.osx
+# TODO These need to be updated and fixed
+# echo "Hello OSX"
+# ./.osx
 
 # Install brew if it isn't already
 if ! `which brew` > /dev/null; then
@@ -39,7 +54,10 @@ $(brew --prefix)/opt/fzf/install
 
 # Customize and update npm
 echo "Node, Node, Node"
-nvm install latest
+# Install nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+# TODO need to source nvm to run it here
+nvm install node
 nvm alias default node
 # npm set prefix /usr/local/share/npm/
 npm install -g npm
@@ -66,3 +84,5 @@ mv ~/.vim/colors/TigerStripe/colors/TigerStripe.vim ~/.vim/colors/TigerStripe.vi
 rm -rf ~/.vim/colors/TigerStripe
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
+
+source ~/.zshrc
