@@ -1,7 +1,6 @@
 " Forget being compatible with good ol' vi
 set nocompatible
 
-
 " Vundle
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -14,10 +13,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Adds a file browser to the sidebar
 Plugin 'scrooloose/nerdtree'
-
-" CSS helpers
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'wavded/vim-stylus'
 
 " JavaScript highlighting and indentation
 Plugin 'pangloss/vim-javascript'
@@ -80,10 +75,6 @@ Plugin 'tpope/vim-commentary'
 
 " Allow editorconfig files
 Plugin 'editorconfig/editorconfig-vim'
-
-
-" Work with Git
-Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 
