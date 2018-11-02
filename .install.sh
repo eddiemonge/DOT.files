@@ -76,7 +76,7 @@ wget https://gist.github.com/eddiemonge/8185698/raw/51bdd743cc1cc551c49457fe1503
 
 # Install macvim
 echo "Vimmy whimmy"
-brew install macvim --env-std --override-system-vim
+brew install macvim --with-override-system-vim --env=std
 
 # Vim setup stuff
 git clone https://github.com/eddiemonge/TigerStripe.git ~/.vim/colors/TigerStripe
