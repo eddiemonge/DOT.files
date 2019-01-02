@@ -57,7 +57,7 @@ function refreshtest {
   if [ -d ~/Desktop/test ]; then
     builtin cd ~/Desktop && trash test
   fi
-  md test
+  md ~/Desktop/test
 }
 
 
