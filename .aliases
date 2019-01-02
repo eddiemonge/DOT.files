@@ -39,7 +39,8 @@ alias docker-clean-all='docker stop $(docker container ls -a -q) && docker syste
 ## Better ping
 alias ping='prettyping --nolegend'
 
-## fzf (replacement for Ctrl+R
+## fzf (replacement for Ctrl+R)
+## Preview files in a tree like setting
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 # add support for ctrl+o to open selected file in VS Code
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
