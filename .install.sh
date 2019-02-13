@@ -47,7 +47,7 @@ brew install zsh
 echo "ZSH it up"
 which zsh | sudo tee -a /etc/shells
 chsh -s $(which zsh)
-brew install python wget ack trash git nvm bat prettyping fzf
+brew install python wget ack trash git nvm bat prettyping fzf fd
 # Install fzf useful key bindings and fuzzy completion:
 $(brew --prefix)/opt/fzf/install
 
