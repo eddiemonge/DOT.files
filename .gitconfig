@@ -1,6 +1,7 @@
 [alias]
   br = branch
   ci = commit
+  cp = cherry-pick
   co = checkout
   df = diff
   pb = publish-branch
@@ -8,7 +9,9 @@
   ms = merge --squash
   pr = pull --rebase
   prum = pull --rebase upstream master
+  pru = pull --rebase upstream
   prom = pull --rebase origin master
+  pro = pull --rebase origin
   pfu = push -f upstream
   pfo = push -f origin
   rmbr = "![ x$# != x1 ]&&echo "branch required" >&2 && exit || git co master && git prum && git co \"$1\" && git prum && git co master && git br -d \"$1\" #"
