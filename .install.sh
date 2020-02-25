@@ -114,7 +114,7 @@ fi
 # Install macvim
 echo "Vimmy whimmy"
 if [ "$OS" == "Mac" ]; then
-  brew install macvim --with-override-system-vim --env=std
+  brew install macvim
 elif [ "$OS" == "Linux" ]; then
   sudo apt-get install vim-nox
 fi
