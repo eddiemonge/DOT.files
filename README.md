@@ -6,7 +6,7 @@ These are my DOT files so I can get up and running on a new system quickly
 
 Mac OSX:
 ```
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/eddiemonge/DOT.files/master/.install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/eddiemonge/DOT.files/master/.install.sh)"
 ```
 
 Linux:
