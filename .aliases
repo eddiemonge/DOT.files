@@ -1,14 +1,5 @@
 # Only use these if in an interactive prompt
 case "$-" in *i*) ;; *) return ;; esac
-case "$(uname -s)" in
-  Linux*)     OS=Linux;;
-  Darwin*)    OS=Mac;;
-  *)          OS="UNKNOWN}"
-esac
-
-if [ "$OS" == "UNKNOWN"]; then
-  return
-fi
 
 # Dir navigation
 alias ll="ls -alh"
@@ -27,9 +18,15 @@ alias npmlib="cd $(npm config get prefix)/lib/node_modules && ll"
 alias g="git"
 
 ## Vim helpers
-if [ "$OS" == "Mac"]; then
-  alias vim="mvim"
-fi
+whichvim()
+{
+  if [ x`which mvim 2> /dev/null` = x ]; then
+    mvim "$@"
+  else
+    vim "$@"
+  fi
+}
+alias vim="whichvim"
 alias v="vim"
 alias vdiff="vim -d"
 alias vimdiff="vim -d"
