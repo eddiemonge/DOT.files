@@ -35,9 +35,23 @@ fi
 # as there are complaints that there are already files in it
 echo "Do the dots dance"
 [[ -d ~/DOTS ]] || git clone --recursive https://github.com/eddiemonge/DOT.files.git ~/DOTS
-# Move twice to move the .files and the files
-mv ~/DOTS/.* ./
-mv ~/DOTS/* ./
+# Be explicit about whats being moved
+mv ~/DOTS/.ackrc ./.ackrc
+mv ~/DOTS/.aliases ./.aliases
+mv ~/DOTS/.git ./.git
+mv ~/DOTS/.gitconfig ./.gitconfig
+mv ~/DOTS/.gitignore ./.gitignore
+mv ~/DOTS/.gitignore_global ./.gitignore_global
+mv ~/DOTS/.gitmodules ./.gitmodules
+mv ~/DOTS/.install.sh ./.install.sh
+mv ~/DOTS/.oh-my-zsh_custom ./.oh-my-zsh_custom
+mv ~/DOTS/.osx.sh ./.osx.sh
+mv ~/DOTS/.profile ./.profile
+mv ~/DOTS/.vim ./.vim
+mv ~/DOTS/.vimrc ./.vimrc
+mv ~/DOTS/.zshrc ./.zshrc
+mv ~/DOTS/README.md ./README.md
+mv ~/DOTS/Settings ./Settings
 rm -rf ~/DOTS
 
 # Run the OS customizations
