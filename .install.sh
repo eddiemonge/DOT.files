@@ -98,9 +98,12 @@ nvm upgrade
 npm install -g npm
 
 # Doing some python stuff
-# echo "Ugh Python. Whhhhhyyyy?"
-# pip3 install --upgrade pip setuptools wheel
-# pip3 install pygments powerline-status
+# Need to check if this works on Linux
+if [ "$OS" == "Mac" ]; then
+  echo "Ugh Python. Whhhhhyyyy?"
+  pip3 install --upgrade pip setuptools wheel
+  pip3 install pygments powerline-status
+fi
 
 # Install custom fonts
 if [ "$OS" == "Mac" ]; then
