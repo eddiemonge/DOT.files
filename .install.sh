@@ -7,7 +7,7 @@ case "$(uname -s)" in
   *)          OS="UNKNOWN}"
 esac
 
-if [ "$OS" == "UNKNOWN"]; then
+if [ "$OS" == "UNKNOWN" ]; then
   echo "Unknown OS $(uname -s), quitting install"
   exit 1
 fi
@@ -17,12 +17,12 @@ echo "Sudo password is needed later on. Asking now so installation can proceed u
 sudo cd ~
 
 # Install Chrome and VSCode
-if [ "$OS" == "Mac"]; then
+if [ "$OS" == "Mac" ]; then
   open https://www.google.com/chrome
   open https://code.visualstudio.com/download
 fi
 
-if [ "$OS" == "Mac"]; then
+if [ "$OS" == "Mac" ]; then
   # Xcode is needed later
   xcode-select --install
   open -a App\ Store
@@ -41,7 +41,7 @@ rm -rf ~/DOTS
 
 # Run the OS customizations
 #   TODO These need to be updated and fixed
-if [ "$OS" == "Mac"]; then
+if [ "$OS" == "Mac" ]; then
   echo "Hello OSX"
   sh .osx
 fi
@@ -55,7 +55,7 @@ fi
 
 # Install brew if it isn't already
 echo "Brew me"
-if [ "$OS" == "Mac" && ! `which brew` > /dev/null]; then
+if [ "$OS" == "Mac" && ! `which brew` > /dev/null ]; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 elif [ "$OS" == "Linux" ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
@@ -86,7 +86,7 @@ npm install -g npm
 # pip3 install pygments powerline-status
 
 # Install custom fonts
-if [ "$OS" == "Mac"]; then
+if [ "$OS" == "Mac" ]; then
   echo "Font you"
   cd ~/Desktop
   wget http://www.levien.com/type/myfonts/Inconsolata.otf && open Inconsolata.otf
@@ -96,7 +96,7 @@ fi
 
 # Install macvim
 echo "Vimmy whimmy"
-if [ "$OS" == "Mac" && ! `which brew` > /dev/null]; then
+if [ "$OS" == "Mac" && ! `which brew` > /dev/null ]; then
   brew install macvim --with-override-system-vim --env=std
 elif [ "$OS" == "Linux" ]; then
   sudo apt-get install vim-nox
