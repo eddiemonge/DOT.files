@@ -25,7 +25,7 @@ fi
 
 if [ "$OS" == "Mac" ]; then
   # Xcode is needed later
-  xcode-select --install
+  xcode-select --install > /dev/null
   open -a App\ Store
   echo "Install these from the App Store: Divvy, Navicat, Skitch"
   echo "Install these manually: Alfred, Docker, iTerm2"
@@ -34,7 +34,7 @@ fi
 # Get the dot.files. Can't clone the repo directly into the home folder
 # as there are complaints that there are already files in it
 echo "Do the dots dance"
-[[ -d "~/DOTS" ]] || git clone --recursive https://github.com/eddiemonge/DOT.files.git "~/DOTS"
+[[ -d ~/DOTS ]] || git clone --recursive https://github.com/eddiemonge/DOT.files.git ~/DOTS
 # Move twice to move the .files and the files
 mv ~/DOTS/.* ./
 mv ~/DOTS/* ./
@@ -44,7 +44,7 @@ rm -rf ~/DOTS
 #   TODO These need to be updated and fixed
 if [ "$OS" == "Mac" ]; then
   echo "Hello OSX"
-  sh .osx
+  sh .osx.sh
 fi
 
 # Linux needs some things installed first
@@ -67,7 +67,7 @@ fi
 # Install some supporting software
 brew install wget ack trash git bat prettyping fzf fd
 # Install fzf useful key bindings and fuzzy completion:
-$(brew --prefix)/opt/fzf/install
+$(brew --prefix)/opt/fzf/install --no-completion
 
 # Install ZSH and other stuff
 echo "ZSH it up"
