@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 # Pin the dock to the corner
 defaults write com.apple.dock pinning -string end

@@ -1,88 +1,125 @@
 #!/bin/bash
 
-# TODO add command line install for:
-# Chrome
-# Docker
-# iTerm
-# VSCode
+# Add different instructions for Linux/MacOSX
+case "$(uname -s)" in
+  Linux*)     OS=Linux;;
+  Darwin*)    OS=Mac;;
+  *)          OS="UNKNOWN}"
+esac
 
-# Make sure we start in the home directory and get the password prompt out of the way
-echo "User password is needed later on"
-sudo cd ~
-
-# Xcode is needed later
-open -a App\ Store
-# Manuall install:
-# Slack
-# Divvy
-# Alfred 3
-# Skitch
-# Navicat
-xcode-select --install
-
-# Get the dot.files
-echo "Do the dots dance"
-rm -rf DOTS
-git clone --recursive https://github.com/eddiemonge/DOT.files.git ~/DOTS
-# Move twice to move the .files and the files
-mv DOTS/.* ./
-mv DOTS/* ./
-rm -rf DOTS
-# Will need to update the location of the submodule in .git/module/.oh-my-zsh/config
-# TODO Not sure what the above comment is for
-
-# Run the OSX customizations
-# TODO These need to be updated and fixed
-# echo "Hello OSX"
-# ./.osx
-
-# Install brew if it isn't already
-if ! `which brew` > /dev/null; then
-  echo "Brew me"
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+if [ "$OS" == "UNKNOWN"]; then
+  echo "Unknown OS $(uname -s), quitting install"
+  exit 1
 fi
 
-# Install ZSH and other stuff
-brew install zsh
-echo "ZSH it up"
-which zsh | sudo tee -a /etc/shells
-chsh -s $(which zsh)
-brew install python wget ack trash git nvm bat prettyping fzf fd
+# Make sure we start in the home directory and get the password prompt out of the way
+echo "Sudo password is needed later on. Asking now so installation can proceed unattended"
+sudo cd ~
+
+# Install Chrome and VSCode
+if [ "$OS" == "Mac"]; then
+  open https://www.google.com/chrome
+  open https://code.visualstudio.com/download
+fi
+
+if [ "$OS" == "Mac"]; then
+  # Xcode is needed later
+  xcode-select --install
+  open -a App\ Store
+  echo "Install these from the App Store: Divvy, Navicat, Skitch"
+  echo "Install these manually: Alfred, Docker, iTerm2"
+fi
+
+# Get the dot.files. Can't clone the repo directly into the home folder
+# as there are complaints that there are already files in it
+echo "Do the dots dance"
+[[ -d "~/DOTS" ]] || git clone --recursive https://github.com/eddiemonge/DOT.files.git "~/DOTS"
+# Move twice to move the .files and the files
+mv ~/DOTS/.* ./
+mv ~/DOTS/* ./
+rm -rf ~/DOTS
+
+# Run the OS customizations
+#   TODO These need to be updated and fixed
+if [ "$OS" == "Mac"]; then
+  echo "Hello OSX"
+  sh .osx
+fi
+
+# Linux needs some things installed first
+if [ "$OS" == "Linux" ]; then
+  sudo apt-get update
+  sudo apt-get upgrade
+  sudo apt-get install build-essential curl file git 
+fi
+
+# Install brew if it isn't already
+echo "Brew me"
+if [ "$OS" == "Mac" && ! `which brew` > /dev/null]; then
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+elif [ "$OS" == "Linux" ]; then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+fi
+
+# Install some supporting software
+brew install wget ack trash git bat prettyping fzf fd
 # Install fzf useful key bindings and fuzzy completion:
 $(brew --prefix)/opt/fzf/install
 
+# Install ZSH and other stuff
+echo "ZSH it up"
+brew install zsh
+which zsh | sudo tee -a /etc/shells
+chsh -s $(which zsh)
+source ~/.zshrc
 
-# Customize and update npm
+# Install nvm, NodeJS and update npm
 echo "Node, Node, Node"
-# Install nvm
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-# TODO need to source nvm to run it here
 nvm install node
 nvm alias default node
-# npm set prefix /usr/local/share/npm/
+nvm upgrade
 npm install -g npm
 
 # Doing some python stuff
-echo "Ugh Python. Whhhhhyyyy?"
-pip3 install --upgrade pip setuptools wheel
-pip3 install pygments git+git://github.com/Lokaltog/powerline
+# echo "Ugh Python. Whhhhhyyyy?"
+# pip3 install --upgrade pip setuptools wheel
+# pip3 install pygments powerline-status
 
 # Install custom fonts
-echo "Font you"
-cd ~/Desktop
-wget http://www.levien.com/type/myfonts/Inconsolata.otf && open Inconsolata.otf
-wget https://github.com/Lokaltog/powerline-fonts/raw/master/Inconsolata/Inconsolata%20for%20Powerline.otf && open Inconsolata\ for\ Powerline.otf
-wget https://gist.github.com/eddiemonge/8185698/raw/51bdd743cc1cc551c49457fe1503061b9404183f/Inconsolata-dz-Powerline.otf && open Inconsolata-dz-Powerline.otf
+if [ "$OS" == "Mac"]; then
+  echo "Font you"
+  cd ~/Desktop
+  wget http://www.levien.com/type/myfonts/Inconsolata.otf && open Inconsolata.otf
+  wget https://github.com/Lokaltog/powerline-fonts/raw/master/Inconsolata/Inconsolata%20for%20Powerline.otf && open Inconsolata\ for\ Powerline.otf
+  wget https://gist.github.com/eddiemonge/8185698/raw/51bdd743cc1cc551c49457fe1503061b9404183f/Inconsolata-dz-Powerline.otf && open Inconsolata-dz-Powerline.otf
+fi
 
 # Install macvim
 echo "Vimmy whimmy"
-brew install macvim --with-override-system-vim --env=std
+if [ "$OS" == "Mac" && ! `which brew` > /dev/null]; then
+  brew install macvim --with-override-system-vim --env=std
+elif [ "$OS" == "Linux" ]; then
+  sudo apt-get install vim-nox
+fi
 
 # Vim setup stuff
-git clone https://github.com/eddiemonge/TigerStripe.git ~/.vim/colors/TigerStripe
-mv ~/.vim/colors/TigerStripe/colors/TigerStripe.vim ~/.vim/colors/TigerStripe.vim
-rm -rf ~/.vim/colors/TigerStripe
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
-source ~/.zshrc
+# TODO: Configure Git
+# Prompt for email address and name
+
+# cat <<<EOF
+# [user]
+#   name = $FULL_NAME
+#   email = $EMAIL_ADDRESS
+# >>> ~/.gitconfig_custom
+
+# ssh-keygen -t rsa -b 4096 -C "$EMAIL_ADDRESS"
+# eval "$(ssh-agent -s)"
+# cat <<<EOF
+# Host *
+#   AddKeysToAgent yes
+#   UseKeychain yes
+#   IdentityFile ~/.ssh/id_rsa
+# >>> ~/.ssh/config
+# ssh-add -K ~/.ssh/id_rsa

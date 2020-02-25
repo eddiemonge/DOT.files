@@ -1,3 +1,4 @@
-*.DS_Store
+# Ignore everything in this folder (should be the home folder)
+# Everything should be manually added
 .*
 *

@@ -1,7 +1,7 @@
-*~
-*.bak
-.DS_Store
 .dropbox
-npm-debug.log
-.vscode
+.DS_Store
 .npmrc
+.vscode
+*.bak
+*~
+npm-debug.log
