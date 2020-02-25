@@ -26,15 +26,14 @@ whichvim()
     vim "$@"
   fi
 }
-alias vim="whichvim"
-alias v="vim"
-alias vdiff="vim -d"
-alias vimdiff="vim -d"
+alias v="whichvim"
+alias vdiff="whichvim -d"
+alias vimdiff="whichvim -d"
 alias vinstall="vim +PluginInstall +qall"
 
 ## ZSH helpers
 alias zshreload="source ~/.zshrc"
-alias zshconfig="vim ~/.zshrc"
+alias zshconfig="whichvim ~/.zshrc"
 
 ## File previews
 alias c="bat"

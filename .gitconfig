@@ -43,8 +43,7 @@
 [url "git://github.com/"]
   insteadOf = "github:"
 [core]
-  # This might not work on non-OSX
-  editor = mvim -f --nomru -c \"au VimLeave * !open -a iTerm2\"
+  editor = vim
   excludesfile = ~/.gitignore_global
 [push]
   default = current
