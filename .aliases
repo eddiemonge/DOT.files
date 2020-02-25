@@ -1,5 +1,14 @@
 # Only use these if in an interactive prompt
 case "$-" in *i*) ;; *) return ;; esac
+case "$(uname -s)" in
+  Linux*)     OS=Linux;;
+  Darwin*)    OS=Mac;;
+  *)          OS="UNKNOWN}"
+esac
+
+if [ "$OS" == "UNKNOWN"]; then
+  return
+fi
 
 # Dir navigation
 alias ll="ls -alh"
@@ -18,15 +27,17 @@ alias npmlib="cd $(npm config get prefix)/lib/node_modules && ll"
 alias g="git"
 
 ## Vim helpers
-alias v="mvim"
-alias vim="mvim"
-alias vdiff="mvim -d"
-alias vimdiff="mvim -d"
+if [ "$OS" == "Mac"]; then
+  alias vim="mvim"
+fi
+alias v="vim"
+alias vdiff="vim -d"
+alias vimdiff="vim -d"
 alias vinstall="vim +PluginInstall +qall"
 
 ## ZSH helpers
 alias zshreload="source ~/.zshrc"
-alias zshconfig="v ~/.zshrc"
+alias zshconfig="vim ~/.zshrc"
 
 ## File previews
 alias c="bat"
@@ -62,7 +73,7 @@ function refreshtest {
 
 
 # Development stuff
-alias edithosts="sudo mvim /etc/hosts"
+alias edithosts="sudo vim /etc/hosts"
 
 
 # Start an HTTP server from a directory, optionally specifying the port
