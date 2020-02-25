@@ -12,6 +12,7 @@ if [ "$OS" == "UNKNOWN" ]; then
   exit 1
 fi
 
+
 # Make sure we start in the home directory and get the password prompt out of the way
 echo "Sudo password is needed later on. Asking now so installation can proceed unattended"
 sudo cd ~
@@ -104,22 +105,3 @@ fi
 
 # Vim setup stuff
 vim +PluginInstall +qall
-
-# TODO: Configure Git
-# Prompt for email address and name
-
-# cat <<<EOF
-# [user]
-#   name = $FULL_NAME
-#   email = $EMAIL_ADDRESS
-# >>> ~/.gitconfig_custom
-
-# ssh-keygen -t rsa -b 4096 -C "$EMAIL_ADDRESS"
-# eval "$(ssh-agent -s)"
-# cat <<<EOF
-# Host *
-#   AddKeysToAgent yes
-#   UseKeychain yes
-#   IdentityFile ~/.ssh/id_rsa
-# >>> ~/.ssh/config
-# ssh-add -K ~/.ssh/id_rsa
