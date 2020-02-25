@@ -81,7 +81,7 @@ fi
 # Install some supporting software
 brew install wget ack trash git bat prettyping fzf fd
 # Install fzf useful key bindings and fuzzy completion:
-$(brew --prefix)/opt/fzf/install --no-completion
+$(brew --prefix)/opt/fzf/install --no-completion --no-bash --no-zsh --no-fish --no-key-bindings
 
 # Install ZSH and other stuff
 echo "ZSH it up"
