@@ -56,10 +56,12 @@ fi
 
 # Install brew if it isn't already
 echo "Brew me"
-if [ "$OS" == "Mac" && ! `which brew` > /dev/null ]; then
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-elif [ "$OS" == "Linux" ]; then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+if [ ! `which brew` > /dev/null ]; then
+  if [ "$OS" == "Mac" ]; then 
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  elif [ "$OS" == "Linux" ]; then
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+  fi
 fi
 
 # Install some supporting software
@@ -97,7 +99,7 @@ fi
 
 # Install macvim
 echo "Vimmy whimmy"
-if [ "$OS" == "Mac" && ! `which brew` > /dev/null ]; then
+if [ "$OS" == "Mac" ]; then
   brew install macvim --with-override-system-vim --env=std
 elif [ "$OS" == "Linux" ]; then
   sudo apt-get install vim-nox
