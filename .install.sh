@@ -34,7 +34,7 @@ fi
 # Get the dot.files. Can't clone the repo directly into the home folder
 # as there are complaints that there are already files in it
 echo "Do the dots dance"
-[[ -d ~/DOTS ]] || git clone --recursive https://github.com/eddiemonge/DOT.files.git ~/DOTS
+[[ -d ~/DOTS ]] || git clone --recurse-submodules https://github.com/eddiemonge/DOT.files.git ~/DOTS
 # Be explicit about whats being moved
 mv ~/DOTS/.ackrc ./.ackrc
 mv ~/DOTS/.aliases ./.aliases
