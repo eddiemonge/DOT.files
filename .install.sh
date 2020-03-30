@@ -4,13 +4,8 @@
 case "$(uname -s)" in
   Linux*)     OS=Linux;;
   Darwin*)    OS=Mac;;
-  *)          OS="UNKNOWN";;
+  *)          echo "Unknown OS $(uname -s), quitting install" && exit 1;;
 esac
-
-if [ "$OS" == "UNKNOWN" ]; then
-  echo "Unknown OS $(uname -s), quitting install"
-  exit 1
-fi
 
 # Make sure we start in the home directory and get the password prompt out of the way
 echo "Sudo password is needed later on. Asking now so installation can proceed unattended"
