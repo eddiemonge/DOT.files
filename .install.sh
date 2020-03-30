@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Add different instructions for Linux/MacOSX
 case "$(uname -s)" in
