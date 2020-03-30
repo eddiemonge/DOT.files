@@ -4,7 +4,7 @@
 case "$(uname -s)" in
   Linux*)     OS=Linux;;
   Darwin*)    OS=Mac;;
-  *)          OS="UNKNOWN}"
+  *)          OS="UNKNOWN";;
 esac
 
 if [ "$OS" == "UNKNOWN" ]; then
