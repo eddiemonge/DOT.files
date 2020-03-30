@@ -62,8 +62,8 @@ fi
 # Linux needs some things installed first
 if [ "$OS" = "Linux" ]; then
   sudo apt-get update
-  sudo apt-get upgrade
-  sudo apt-get install build-essential curl file git
+  sudo apt-get -y upgrade
+  sudo apt-get -y install build-essential curl file git
 fi
 
 # Install brew if it isn't already
@@ -82,7 +82,7 @@ brew install bat prettyping fzf fd
 if [ "$OS" = "Mac" ]; then
   brew install trash git ack wget zsh
 elif [ "$OS" = "Linux" ]; then
-  sudo apt-get install ack wget zsh
+  sudo apt-get -y install ack wget zsh
 fi
 
 # Install fzf useful key bindings and fuzzy completion:
@@ -124,7 +124,7 @@ echo "Vimmy whimmy"
 if [ "$OS" = "Mac" ]; then
   brew install macvim
 elif [ "$OS" = "Linux" ]; then
-  sudo apt-get install vim-nox
+  sudo apt-get -y install vim-nox
 fi
 
 # Vim setup stuff
