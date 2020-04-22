@@ -1,7 +1,0 @@
-.dropbox
-.DS_Store
-.npmrc
-.vscode
-*.bak
-*~
-npm-debug.log

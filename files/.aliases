@@ -1,0 +1,61 @@
+# Only use these if in an interactive prompt
+case "$-" in *i*) ;; *) return ;; esac
+
+
+# Dir navigation
+alias ll="ls -Alh"
+alias npmlib="cd $(npm config get prefix)/lib/node_modules && ll"
+
+
+# App shortcuts
+
+## Better ping
+alias ping='prettyping --nolegend'
+
+
+## Docker
+alias dco="docker-compose"
+alias docker-clean-unused='docker system prune --all --force --volumes'
+alias docker-clean-all='docker stop $(docker container ls -a -q) && docker system prune -a -f --volumes'
+
+
+## File previews
+
+### Better cat
+alias c="bat"
+
+### Preview files in a tree like setting
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+
+### fzf (replacement for Ctrl+R) support for ctrl+o to open selected files
+export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
+
+# Recursively delete `.DS_Store` files
+alias removeds="find . -name '*.DS_Store' -type f -ls -delete"
+
+
+## Git
+alias g="git"
+
+
+## Vim helpers
+whichvim() {
+  if [ command -v mvim >/dev/null 2>&1 ]; then
+    mvim "$@"
+  else
+    vim "$@"
+  fi
+}
+alias v="whichvim"
+alias vdiff="whichvim -d"
+alias vimdiff="whichvim -d"
+alias vinstall="whichvim +PluginInstall +qall"
+
+
+## ZSH helpers
+alias zshreload="source ~/.zshrc"
+alias zshconfig="whichvim ~/.zshrc"
+
+
+# Development stuff
+alias edithosts="sudo whichvim /etc/hosts"

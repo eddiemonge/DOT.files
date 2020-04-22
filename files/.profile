@@ -11,8 +11,6 @@ export PATH=/usr/local/opt/python/libexec/bin:$PATH
 test -d /home/linuxbrew/.linuxbrew && export PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH
 test -d /home/linuxbrew/.linuxbrew && eval $($(brew --prefix)/bin/brew shellenv)
 
-export GPG_TTY=$(tty)
-
 # Set vim as default editor
 export EDITOR='vim'
 
