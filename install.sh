@@ -75,7 +75,7 @@ else
 fi
 
 # Copy the files over
-rsync -avh --no-perms "$HOME/.dot.files/files/" "$HOME"
+rsync -avhq --no-perms "$HOME/.dot.files/files/" "$HOME"
 
 # Run the OS customizations
 # TODO These need to be updated and fixed
@@ -114,9 +114,13 @@ fi
 "$(brew --prefix)/opt/fzf/install" --no-completion --no-bash --no-zsh --no-fish --no-key-bindings
 
 # Install ZSH and other stuff
-echo "ZSH it up"
-which zsh | sudo tee -a /etc/shells
-chsh -s "$(which zsh)"
+if [ "$SHELL" = "/usr/local/bin/zsh" ]; then
+  echo "Already using zsh"
+else
+  echo "ZSH it up"
+  which zsh | sudo tee -a /etc/shells
+  sudo chsh -s "$(which zsh)"
+fi
 . "$HOME/.zshrc"
 
 # Doing some python stuff
