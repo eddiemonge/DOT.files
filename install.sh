@@ -75,7 +75,7 @@ else
 fi
 
 # Copy the files over
-rsync -avh --no-perms "$HOME/.dot.files/files" ~
+rsync -avh --no-perms "$HOME/.dot.files/files/" "$HOME"
 
 # Run the OS customizations
 # TODO These need to be updated and fixed
@@ -117,7 +117,6 @@ fi
 echo "ZSH it up"
 which zsh | sudo tee -a /etc/shells
 chsh -s "$(which zsh)"
-# shellcheck source=/dev/null
 . "$HOME/.zshrc"
 
 # Doing some python stuff
