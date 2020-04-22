@@ -81,7 +81,7 @@ rsync -avh --no-perms "$HOME/.dot.files/files" ~
 # TODO These need to be updated and fixed
 if [ "$OS" = "Mac" ]; then
   echo "Hello OSX"
-  sh macos.sh
+  sh $HOME/.dot.files/macos.sh"
 fi
 
 # Linux needs some things installed first
