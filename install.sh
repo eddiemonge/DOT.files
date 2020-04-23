@@ -23,7 +23,7 @@ if [ "$OS" = "Mac" ]; then
   function installdmg {
       tempd=$(mktemp -d)
       curl -L $1 > "$tempd"/chrome.dmg
-      listing=$(sudo hdiutil attach "$tempd"/chrome.dmg | grep Volumes)
+      listing=$(sudo hdiutil attach $tempd/pkg.dmg | grep Volumes)
       volume=$(echo "$listing" | cut -f 3)
       if [ -e "$volume"/*.app ]; then
         sudo cp -rf "$volume"/*.app /Applications
@@ -55,6 +55,32 @@ if [ "$OS" = "Mac" ]; then
     installzip https://iterm2.com/downloads/stable/latest
 fi
 
+# Linux needs some things installed first
+if [ "$OS" = "Linux" ]; then
+  sudo apt-get update
+  sudo apt-get -y upgrade
+  sudo apt-get -y install build-essential curl file git
+fi
+
+# Install brew if it isn't already
+echo "Brew me"
+if [ ! "$(which brew)" ]; then
+  if [ "$OS" = "Mac" ]; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    brew install trash git ack wget zsh
+  elif [ "$OS" = "Linux" ]; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    brew install gcc
+    sudo apt-get -y install ack wget zsh
+  fi
+
+  # Install some supporting software
+  brew install bat prettyping fzf fd
+else
+  brew update
+  brew upgrade
+fi
+
 # Get the DOT.files. Can't clone the repo directly into the home folder
 # as there are complaints that there are already files in it
 echo "Do the dots dance"
@@ -84,34 +110,16 @@ if [ "$OS" = "Mac" ]; then
   sh "$HOME/.dot.files/macos.sh"
 fi
 
-# Linux needs some things installed first
-if [ "$OS" = "Linux" ]; then
-  sudo apt-get update
-  sudo apt-get -y upgrade
-  sudo apt-get -y install build-essential curl file git
-fi
-
-# Install brew if it isn't already
-echo "Brew me"
-if [ ! "$(which brew)" ]; then
-  if [ "$OS" = "Mac" ]; then
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-    brew install trash git ack wget zsh
-  elif [ "$OS" = "Linux" ]; then
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-    brew install gcc
-    sudo apt-get -y install ack wget zsh
-  fi
-
-  # Install some supporting software
-  brew install bat prettyping fzf fd
-else
-  brew update
-  brew upgrade
-fi
-
 # Install fzf useful key bindings and fuzzy completion:
 "$(brew --prefix)/opt/fzf/install" --no-completion --no-bash --no-zsh --no-fish --no-key-bindings
+
+# Install zsh helpers
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+  git clone https://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh"
+fi
+if [ ! -d "$HOME/.oh-my-zsh_custom/plugins/zsh-nvm" ]; then
+  git clone https://github.com/lukechilds/zsh-nvm "$HOME/.oh-my-zsh_custom/plugins/zsh-nvm"
+fi
 
 # Install ZSH and other stuff
 if [ "$SHELL" = "/usr/local/bin/zsh" ]; then
@@ -128,8 +136,8 @@ fi
 if [ "$OS" = "Mac" ]; then
   if [ ! "$(which pygmentize)" ]; then
     echo "Ugh Python. Whhhhhyyyy?"
-    pip3 install --upgrade pip setuptools wheel
-    pip3 install pygments powerline-status
+    pip3 install --upgrade --user pip setuptools wheel
+    pip3 install --user pygments powerline-status
   fi
 fi
 
@@ -146,16 +154,16 @@ if [ "$OS" = "Mac" ]; then
   fi
 fi
 
-# Install macvim
+# Install vim
 echo "Vimmy whimmy"
 if [ "$OS" = "Mac" ]; then
   brew install macvim
-  brew install vim --with-override-system-vi
 elif [ "$OS" = "Linux" ]; then
   sudo apt-get -y install vim-nox
 fi
 
 # Vim setup stuff
+git clone https://github.com/VundleVim/Vundle.vim.git "$HOME/.vim/bundle/Vundle.vim"
 vim +PluginInstall +qall
 
 # Cleanup
