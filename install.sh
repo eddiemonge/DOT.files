@@ -145,10 +145,10 @@ fi
 if [ "$OS" = "Mac" ]; then
   if [ ! -f "$HOME/Library/Fonts/Inconsolata.otf" ]; then
     echo "Font install"
-    builtin cd ~/Library/Fonts && { \
-      curl -O 'http://www.levien.com/type/myfonts/Inconsolata.otf' ; \
-      curl -O 'https://github.com/Lokaltog/powerline-fonts/raw/master/Inconsolata/Inconsolata%20for%20Powerline.otf' ; \
-      curl -O 'https://gist.github.com/eddiemonge/8185698/raw/51bdd743cc1cc551c49457fe1503061b9404183f/Inconsolata-dz-Powerline.otf' ; \
+    builtin cd "$HOME/Library/Fonts" && { \
+      curl -L -O 'http://www.levien.com/type/myfonts/Inconsolata.otf' ; \
+      curl -L -O 'https://github.com/Lokaltog/powerline-fonts/raw/master/Inconsolata/Inconsolata%20for%20Powerline.otf' ; \
+      curl -L -O 'https://gist.github.com/eddiemonge/8185698/raw/51bdd743cc1cc551c49457fe1503061b9404183f/Inconsolata-dz-Powerline.otf' ; \
       builtin cd -; \
     }
   fi
@@ -163,8 +163,11 @@ elif [ "$OS" = "Linux" ]; then
 fi
 
 # Vim setup stuff
-git clone https://github.com/VundleVim/Vundle.vim.git "$HOME/.vim/bundle/Vundle.vim"
-vim +PluginInstall +qall
+if [ ! -d "$HOME/.vim/bundle/Vundle.vim" ]; then
+  git clone https://github.com/VundleVim/Vundle.vim.git "$HOME/.vim/bundle/Vundle.vim"
+  vim +PluginInstall +qall
+else
+fi
 
 # Cleanup
 echo "Cleaning up..."
