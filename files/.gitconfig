@@ -14,7 +14,7 @@
   pro = pull --rebase origin
   pfu = push -f upstream
   pfo = push -f origin
-  rmbr = "![ x$# != x1 ]&&echo "branch required" >&2 && exit || git co master && git prum && git co \"$1\" && git prum && git co master && git br -d \"$1\" #"
+  rmbr = "![ x$# != x1 ]&&echo "branch required" >&2 && exit || git co \"$1\" && git prum && git co master && git prum && git br -d \"$1\" #"
 [color]
   ui = auto
 [color "branch"]
