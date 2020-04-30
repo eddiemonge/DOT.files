@@ -57,6 +57,3 @@ for file in $HOME/.{secrets,aliases,aliases_custom,functions}; do
   [ -r "$file" ] && source "$file"
 done
 unset file
-
-# Load fzf autocompletions
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
