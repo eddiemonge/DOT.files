@@ -46,7 +46,7 @@ if [ "$OS" = "Mac" ]; then
     installdmg https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
   [ ! -d "/Applications/Docker.app" ] && \
     echo "Installing Docker" && \
-    installdmg https://download.docker.com/mac/stable/Docker.dmg
+    installdmg https://desktop.docker.com/mac/main/arm64/Docker.dmg
   [ ! -d "/Applications/Visual Studio Code.app" ] && \
     echo "Installing VSCode" && \
     installzip https://update.code.visualstudio.com/latest/darwin/stable
