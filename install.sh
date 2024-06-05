@@ -37,6 +37,8 @@ if [ "$OS" = "Mac" ]; then
       unzip -q "$tempd"/file.zip -d "$tempd"
       if [ -e "$tempd"/*.app ]; then
         sudo cp -rf "$tempd"/*.app /Applications
+      else
+        echo "$1 was not an app"
       fi
       rm -rf "$tempd"
   }
@@ -49,7 +51,7 @@ if [ "$OS" = "Mac" ]; then
     installdmg https://desktop.docker.com/mac/main/arm64/Docker.dmg
   [ ! -d "/Applications/Visual Studio Code.app" ] && \
     echo "Installing VSCode" && \
-    installzip https://update.code.visualstudio.com/latest/darwin/stable
+    installzip https://code.visualstudio.com/sha/download?build=stable&os=darwin-universal
   [ ! -d "/Applications/iTerm.app" ] && \
     echo "Installing iTerm2" && \
     installzip https://iterm2.com/downloads/stable/latest
@@ -74,7 +76,7 @@ if [ ! "$(which brew)" ]; then
   fi
 
   # Install some supporting software
-  brew install bat prettyping fzf fd
+  brew install bat prettyping
 else
   brew update
   brew upgrade
@@ -83,9 +85,9 @@ fi
 # Get the DOT.files. Can't clone the repo directly into the home folder
 # as there are complaints that there are already files in it
 echo "Do the dots dance"
-if [ ! -d "$HOME/.dot.files" ]; then
-  git clone --recurse-submodules https://github.com/eddiemonge/DOT.files.git "$HOME/.dot.files"
-  builtin cd "$HOME/.dot.files" && { \
+if [ ! -d "$HOME/.dotfiles" ]; then
+  git clone --recurse-submodules https://github.com/eddiemonge/DOT.files.git "$HOME/.dotfiles"
+  builtin cd "$HOME/.dotfiles" && { \
     # Just in case git did not do the submodules
     git submodule update --init --recursive ; \
     git remote set-url origin git@github.com:eddiemonge/DOT.files.git ; \
@@ -93,7 +95,7 @@ if [ ! -d "$HOME/.dot.files" ]; then
     builtin cd -; \
   }
 else
-  builtin cd "$HOME/.dot.files" && { \
+  builtin cd "$HOME/.dotfiles" && { \
     git pull origin-http main ; \
     git submodule update ; \
     builtin cd -; \
@@ -101,7 +103,8 @@ else
 fi
 
 # Copy the files over
-rsync -avhq --no-perms "$HOME/.dot.files/files/" "$HOME"
+# TODO: Maybe these should go in the .rc? folder
+# rsync -avhq --no-perms "$HOME/.dotfiles/files/" "$HOME"
 
 # Run the OS customizations
 # TODO These need to be updated and fixed
@@ -142,9 +145,16 @@ if [ "$OS" = "Mac" ]; then
   fi
 fi
 
+# Install xcode since it is usually required for things
+xcode-select --install
+
 # Cleanup
 echo "Cleaning up..."
 brew cleanup
+
+# TODO: setup git info
+# git config --global user.name "name name"
+# git config --global user.email email@email
 
 echo "All done!"
 
