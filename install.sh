@@ -153,21 +153,6 @@ if [ "$OS" = "Mac" ]; then
   fi
 fi
 
-# Install vim
-echo "Vimmy whimmy"
-if [ "$OS" = "Mac" ]; then
-  brew install macvim
-elif [ "$OS" = "Linux" ]; then
-  sudo apt-get -y install vim-nox
-fi
-
-# Vim setup stuff
-if [ ! -d "$HOME/.vim/bundle/Vundle.vim" ]; then
-  git clone https://github.com/VundleVim/Vundle.vim.git "$HOME/.vim/bundle/Vundle.vim"
-  vim +PluginInstall +qall
-else
-fi
-
 # Cleanup
 echo "Cleaning up..."
 brew cleanup
@@ -177,8 +162,6 @@ echo "All done!"
 if [ "$OS" = "Mac" ]; then
   if [ ! -d "/Applications/Google Chrome.app" ]; then
     open -a App\ Store
-    echo "Install these from the App Store: Divvy, Navicat, Skitch"
-    open -a https://www.alfredapp.com/
-    echo "Install this manually: Alfred"
+    echo "Install these from the App Store: Divvy"
   fi
 fi
