@@ -65,11 +65,10 @@ fi
 # Install brew if it isn't already
 echo "Brew me"
 if [ ! "$(which brew)" ]; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   if [ "$OS" = "Mac" ]; then
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     brew install trash git ack wget zsh
   elif [ "$OS" = "Linux" ]; then
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     brew install gcc
     sudo apt-get -y install ack wget zsh
   fi
