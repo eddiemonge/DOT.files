@@ -22,7 +22,7 @@ if [ "$OS" = "Mac" ]; then
   # https://apple.stackexchange.com/questions/73926/is-there-a-command-to-install-a-dmg
   function installdmg {
       tempd=$(mktemp -d)
-      curl -L $1 > "$tempd"/chrome.dmg
+      curl -L $1 > "$tempd"/pkg.dmg
       listing=$(sudo hdiutil attach $tempd/pkg.dmg | grep Volumes)
       volume=$(echo "$listing" | cut -f 3)
       if [ -e "$volume"/*.app ]; then
