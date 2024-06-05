@@ -89,11 +89,12 @@ if [ ! -d "$HOME/.dot.files" ]; then
     # Just in case git did not do the submodules
     git submodule update --init --recursive ; \
     git remote set-url origin git@github.com:eddiemonge/DOT.files.git ; \
+    git remote set-url origin-http https://github.com/eddiemonge/DOT.files.git ; \
     builtin cd -; \
   }
 else
   builtin cd "$HOME/.dot.files" && { \
-    git pull origin main ; \
+    git pull origin-http main ; \
     git submodule update ; \
     builtin cd -; \
   }
