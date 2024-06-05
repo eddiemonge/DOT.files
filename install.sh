@@ -67,7 +67,7 @@ echo "Brew me"
 if [ ! "$(which brew)" ]; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   if [ "$OS" = "Mac" ]; then
-    brew install trash git ack wget zsh
+    brew install trash git ack wget
   elif [ "$OS" = "Linux" ]; then
     brew install gcc
     sudo apt-get -y install ack wget zsh
@@ -93,7 +93,7 @@ if [ ! -d "$HOME/.dot.files" ]; then
   }
 else
   builtin cd "$HOME/.dot.files" && { \
-    git pull origin master ; \
+    git pull origin main ; \
     git submodule update ; \
     builtin cd -; \
   }
