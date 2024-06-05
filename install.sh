@@ -131,24 +131,12 @@ else
 fi
 . "$HOME/.zshrc"
 
-# Doing some python stuff
-# Only need powerline fonts in vim so this is not necessary on Linux
-if [ "$OS" = "Mac" ]; then
-  if [ ! "$(which pygmentize)" ]; then
-    echo "Ugh Python. Whhhhhyyyy?"
-    pip3 install --upgrade --user pip setuptools wheel
-    pip3 install --user pygments powerline-status
-  fi
-fi
-
 # Install custom fonts
 if [ "$OS" = "Mac" ]; then
   if [ ! -f "$HOME/Library/Fonts/Inconsolata.otf" ]; then
     echo "Font install"
     builtin cd "$HOME/Library/Fonts" && { \
       curl -L -O 'http://www.levien.com/type/myfonts/Inconsolata.otf' ; \
-      curl -L -O 'https://github.com/Lokaltog/powerline-fonts/raw/master/Inconsolata/Inconsolata%20for%20Powerline.otf' ; \
-      curl -L -O 'https://gist.github.com/eddiemonge/8185698/raw/51bdd743cc1cc551c49457fe1503061b9404183f/Inconsolata-dz-Powerline.otf' ; \
       builtin cd -; \
     }
   fi
